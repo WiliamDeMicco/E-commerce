@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    font-family: 'Geologica', serif;
+}
+
+.sfondo-head{
+    display: flex;
+    width: 100% !important;
+    min-height: 50%;
+    background-image: url(/img/SOFT_RED_BANNER.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    padding: 10%;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+    z-index: 1;
+    color: #e4aaa3;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+    1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
