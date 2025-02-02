@@ -36,3 +36,32 @@
 .header-right {
     float: right;
 }
+
+.carta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right rgba(254, 248, 209) rgba(255, 255, 255));
+}
+
+.card {
+    width: 200px;
+    border: none;
+}
+
+h1 {
+    margin-left: ;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    border: solid, rgb(255, 255, 255);
+    padding: 10%;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+}
