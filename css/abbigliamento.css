@@ -33,6 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 3px 3px #ddd7ac;
 }
 
 #tasto-ricerca{
@@ -70,17 +71,27 @@
 }
 
 .filtri{
-    border: 1px solid whitesmoke;
+    border: none;
     border-radius: 10px;
     width: auto !important;
-    height: auto;
+    height: 32em;
     display: flex;
     flex-flow: column wrap;
+    box-shadow: 3px 3px #e4a9a367;
 }
 
 .card{
+    border: none !important;
     width: 20rem;
     margin: 1rem;
+    box-shadow: 3px 3px #e4a9a367;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img{
+    width: 18em;
 }
 
 .bi-star-fill{
