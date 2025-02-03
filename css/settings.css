@@ -35,26 +35,10 @@
     float: right;
 }
 
-.carta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to right rgba(254, 248, 209) rgba(255, 255, 255));
-
-}
-
-.card {
-    width: 200px;
-    border: none;
-    margin-bottom: 10%;
-}
-
 h1 {
     color: rgba(254, 248, 209);
-    margin-left: 12%;
+    text-align: center;
 }
-
-h1:hover {}
 
 button {
     display: flex;
@@ -63,21 +47,52 @@ button {
 }
 
 .container {
-    margin: 10%
+    align-content: center;
+    display: flex;
+    justify-content: center;
 }
 
-.col-6 {
+.col-sm-6 {
     font-style: italic;
 
 }
 
 input {
-
     border-radius: 20px 20px 20px 20px;
     border: 10px;
     box-shadow: 0 1px 1px 0 rgba(254, 248, 209, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 input:hover {
-    box-shadow: 0 1px 1px 0 rgba(254, 248, 209, 1), 0 1px 10px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.1), 0 1px 10px 0 rgba(255, 255, 255, 0.1);
+}
+
+.allinea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+aside {
+    float: left;
+    border-right: solid rgb(0, 0, 0, 0.1);
+    box-shadow: black 50%;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40%;
+    align-items: center;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+aside:hover {
+    background-color: aliceblue;
+    color: green
+}
+
+h5:hover {
+    color: black;
 }
