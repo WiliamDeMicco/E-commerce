@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    background: url(/img/SOFT_RED_BANNER.png) no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Geologica', serif;
+}
+
+.titolo-pagina {
+    display: flex;
+    justify-content: center;
+    color: #FFCD66;
+    height: auto ! important;
+    top: 0;
+}
+
+.display-1 {
+    font-weight: 650 !important;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5em solid transparent;
+    border-right: 5em solid transparent;
+    border-bottom: 7em solid #fef8d1;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5em solid transparent;
+    border-right: 5em solid transparent;
+    border-top: 7em solid #fef8d1;
+}
+
+.domande{
+    margin: 0% 10% !important;
+}

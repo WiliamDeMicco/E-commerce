@@ -7,8 +7,6 @@
 
 .sfondo-head{
     display: flex;
-    width: 100% !important;
-    min-height: 50%;
     background-image: url(/img/SOFT_RED_BANNER.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,18 +19,11 @@
     top: 50%;
     width: 100%;
     text-align: center;
-    font-size: 10vw;
+    font-size: 8vw;
     z-index: 1;
     color: #e4aaa3;
     text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
     1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
-}
-
-.shop-container{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .search-bar{
@@ -42,6 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 3px 3px #ddd7ac;
 }
 
 #tasto-ricerca{
@@ -61,4 +53,47 @@
 
 .ricerca{
     margin-bottom: -10px;
+}
+
+.shop-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.risultati{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    padding-left: 5em !important;
+}
+
+.filtri{
+    border: none;
+    border-radius: 10px;
+    width: auto !important;
+    height: 32em;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 3px 3px #e4a9a367;
+}
+
+.card{
+    border: none !important;
+    width: 20rem;
+    margin: 1rem;
+    box-shadow: 3px 3px #e4a9a367;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img{
+    width: 18em;
+}
+
+.bi-star-fill{
+    margin-top: -2.5%;
 }
