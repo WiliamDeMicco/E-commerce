@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+body {
+    font-family: Geologica;
+    background-image: linear-gradient(to right, #8bd4b9a9 0%, #8bd4b958 100%);
+    height: 100vh;
+    width: 100%;
+    display: flexbox;
+}
+
+
 .header a {
     overflow: hidden;
     background-color: #f1f1f1;
@@ -62,49 +73,52 @@ footer {
     float: left;
 }
 
-i {
-    padding-left: 5px;
+/*carrello*/
+.wrapper {
+    height: 23px;
+    min-width: 12px;
+    width: 70px;
+    background-color: aliceblue;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-body {
-    background-image: linear-gradient(to right, #8bd4b9a9 0%, #8bd4b958 100%);
+div.col {
+    text-align: justify;
 }
 
-.container {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.wrapper span {
+    width: 100%;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 50px;
+    cursor: pointer;
+}
+
+.wrapper span.num {
+    font-size: 20px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    border-style: hidden;
+    pointer-events: none;
+}
+
+.container .py-5 {
+    display: flex;
+    text-align: justify;
 
 
 }
 
 .carrello {
     background-color: #8bd4b9;
-    flex-grow: 2;
     border-radius: 20px;
     margin-top: 8%;
     margin-left: 4%;
-    max-width: 75%;
+    max-width: 100%;
     height: fit-content;
-}
 
-.container .text-center {
-    justify-content: space-evenly;
-    column-gap: 20px;
-    flex-direction: column;
-    row-gap: 10px;
-
-
-}
-
-li {
-    list-style: none;
-}
-
-.btn-group {}
-
-#meno {
-    padding: 1px;
-    width: 80px;
-    height: 80px;
 }
