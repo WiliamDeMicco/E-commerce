@@ -18,9 +18,11 @@
 
 <body>
     <div class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a id="bottonelogo" class="navbar-brand m-2 p-1" href="#">
+                    <img src="img/Shoppone vero.png" alt="logo" width="100">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -29,33 +31,27 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link m-2" href="#">Carrello</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
+                            <a class="nav-link dropdown-toggle m-2" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Profilo</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Info Profilo</a></li>
+                                <li><a class="dropdown-item" href="#">I Miei Ordini</a></li>
+                                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Ricerca prodotto"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Cerca</button>
                     </form>
+                    <div class="auth-links d-flex align-items-center ms-3">
+                        <a class="fa fa-sign-in me-3" href="#"></a>
+                        <a class="fa fa-user-plus" href="#"></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -97,6 +93,7 @@
                 </div>
             </div>
 
+
             <div class="col-md-4">
                 <div class="riepilogo text-center">
                     <h2 class="fw-bold riepilogo">RIEPILOGO CARRELLO</h2>
@@ -117,35 +114,29 @@
         </div>
     </div>
 
-
-    <div class="container fine-pagina">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mb-0">
-            <div class="col-md-4 d-flex align-items-center">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-solid fa-x"></i>
-                <i class="fa-brands fa-tiktok"></i>
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">© 2025 GWALLERY, SRL</span>
+    <div class="container-fluid fine-pagina">
+        <footer
+            class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mb-0 fine-pagina">
+            <div class="social-icons d-flex align-items-center">
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fa-solid fa-x"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
             </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
-            </ul>
+            <div class="text-center">
+                <span class="text-body-secondary">&copy; 2025 GWALLERY SRL - P.IVA 11234567890</span>
+                <br>
+                <a href="#" class="privacy-link">Privacy Policy</a> |
+                <a href="#" class="privacy-link">Condizioni Generali di Uso e Vendita</a> |
+                <a href="#" class="privacy-link">Informativa sulla Privacy</a>
+            </div>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
 
     <script>
 
@@ -156,7 +147,7 @@
         let a = 1;
         plus.addEventListener("click", () => {
             a++;
-            a = (a < 10) ? "0" + a : a;
+
             num.innerText = a;
             console.log(a);
         });
@@ -165,13 +156,14 @@
             if (a > 1) {
                 a--;
 
-
-                a = (a < 10) ? "0" + a : a;
                 num.innerText = a;
                 console.log(a);
             }
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
