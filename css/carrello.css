@@ -106,7 +106,9 @@ div.carrello {
     background-color: #8bd4b9;
     border-radius: 20px;
     max-width: 100%;
-    height: fit-content;
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
 
 }
 
@@ -124,7 +126,7 @@ h2.fw-bold.riepilogo {
 }
 
 h2.fw-bold.carrello {
-    margin-bottom: 11%;
+    margin-bottom: 8%;
     text-align: center
 }
 
