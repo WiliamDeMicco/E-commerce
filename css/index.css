@@ -3,6 +3,7 @@
   background-color: #ffffff;
   padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .navbar-nav .nav-link {
@@ -50,6 +51,9 @@
 */
 
 *
+body{
+background-color: bisque !important;
+}
 .bloccoCentrale
 {
     display: flex;
@@ -114,12 +118,12 @@ footer {
 .social-link {
   text-decoration: none;
   color: inherit;
-  font-size: 20px;
+  font-size: 20px !important;
   transition: color 0.3s;
 }
 
-.social-link:hover {
-  color: #007bff;
+footer .social-icons .social-link:hover {
+  color: #007bff !important;
 }
 
 .privacy-link {
@@ -132,4 +136,17 @@ footer {
 .privacy-link:hover {
   text-decoration: underline;
 }
+i{
+  color: #000 !important;
+  font-size: 20px;
+}
+.text-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.privacy-link{
+  display: inline;
 
+}

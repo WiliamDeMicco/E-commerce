@@ -1,13 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-* {
+.header {
+    background-color: #ffffff !important;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 50 !important;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    color: #000;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #b14d40;
+  }
+  
+  .navbar-brand img {
+    max-width: 100px;
+  }
+  
+  .auth-links a {
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .auth-links a:hover {
+    color: #b14d40;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+.centrale {
     background: url(/img/SOFT_RED_BANNER.png) no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Geologica', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .titolo-pagina {
@@ -43,3 +84,57 @@
 .domande{
     margin: 0% 10% !important;
 }
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px !important;
+    transition: color 0.3s;
+  }
+  
+ footer .social-icons .social-link:hover {
+    color: #007bff !important;
+  }
+  
+  .privacy-link {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .privacy-link:hover {
+    text-decoration: underline;
+  }
+  i{
+    color: #000 !important;
+    font-size: 20px;
+  }
+  .text-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .privacy-link{
+    display: inline;
+
+  }
