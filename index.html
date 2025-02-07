@@ -9,50 +9,42 @@
     <script src="https://kit.fontawesome.com/a294cacca5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <a id="bottonelogo" class="navbar-brand m-2 p-1" href="#" style="display: block; border-style: none;"> <img src="/img/Shoppone vero.png" alt="logo" width="100em"></a>
-              <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link m-2" href="#">Carrello</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle m-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
-                      Profilo
-                    </a>
-                    
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Info Profilo</a></li>
-                      <li><a class="dropdown-item" href="#">I Miei Ordini</a></li>                     
-                      <li><a class="dropdown-item" href="settings.html">Settings</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">     
-                  </li>
-                </ul>
-                <div>
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-3" 0 type="search" placeholder="Ricerca prodotto" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Cerca</button>
-                  </form>
-                </div>
-                <div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="fa fa-sign-in" aria-hidden="true" href="#"></a>
-                    <a class="fa fa-user-plus" aria-hidden="true" href="#"></a>
-                  </li>
-                </ul>
-              </div>
-              </div>
-            </div>
-          </nav>
-    </div>
+  <div class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a id="bottonelogo" class="navbar-brand m-2 p-1" href="#">
+          <img src="/img/Shoppone vero.png" alt="logo" width="100">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link m-2" href="#">Carrello</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle m-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profilo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Info Profilo</a></li>
+                <li><a class="dropdown-item" href="#">I Miei Ordini</a></li>
+                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Ricerca prodotto" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Cerca</button>
+          </form>
+          <div class="auth-links d-flex align-items-center ms-3">
+            <a class="fa fa-sign-in me-3" href="#"></a>
+            <a class="fa fa-user-plus" href="#"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
     
     <div class="bloccoCentrale">
    
@@ -76,18 +68,21 @@
 <br>
 <br>
 
-<div class="container-fluid fine-pagina" >
+<div class="container-fluid fine-pagina">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mb-0 fine-pagina">
-    <div class="d-flex align-items-center">
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-solid fa-x"></i>
-      <i class="fa-brands fa-tiktok"></i>
-      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-      </a>
+    <div class="social-icons d-flex align-items-center">
+      <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="social-link"><i class="fa-solid fa-x"></i></a>
+      <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
     </div>
-    <div><span class="mb-3 mb-md-0 text-body-secondary">© 2025 GWALLERY SRL</span></div>
+    <div class="text-center">
+      <span class="text-body-secondary">&copy; 2025 GWALLERY SRL - P.IVA 11234567890</span>
+      <br>
+      <a href="#" class="privacy-link">Privacy Policy</a> |
+      <a href="#" class="privacy-link">Condizioni Generali di Uso e Vendita</a> |
+      <a href="#" class="privacy-link">Informativa sulla Privacy</a>
+    </div>
   </footer>
 </div>
     

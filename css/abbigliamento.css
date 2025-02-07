@@ -82,7 +82,8 @@
 
 .card{
     border: none !important;
-    width: 20rem;
+    width: 14rem;
+    height: 1em;
     margin: 1rem;
     box-shadow: 3px 3px #e4a9a367;
     display: flex !important;
@@ -91,9 +92,31 @@
 }
 
 .card img{
-    width: 18em;
+    width: 7em;
+}
+
+.card p{
+    font-size: 1em;
 }
 
 .bi-star-fill{
     margin-top: -2.5%;
+}
+
+.card .img{
+    width: 15em;
+    height: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s;
+}
+
+.card .img:hover{
+    transform: scale(1.2);
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
 }
