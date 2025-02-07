@@ -52,6 +52,49 @@ body {}
     background-color: #f8f9fa00 !important;
 }
 
+#selectCategoria {
+    background-color: #e4aaa3;
+    color: white;
+    border-color: #fef8d1;
+
+}
+
+#selectCategoria:hover {
+    background-color: #e4aaa3;
+    color: #fef8d1;
+}
+
+#selectCategoria {
+    border: 2px solid #e4aaa3;
+    border-radius: 5px;
+}
+
+#selectCategoria:hover {
+    border-color: #e4aaa3;
+}
+
+#selectCategoria {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#selectCategoria:hover {
+    border-color: #e4aaa3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#selectCategoria option {
+    background-color: #e4aaa3;
+    color: white;
+    border-radius: 5px !important;
+}
+
+
+#selectCategoria option:hover {
+    background-color: #e4aaa3;
+}
 
 h1 {
     color: rgba(254, 248, 209);
@@ -68,6 +111,8 @@ button {
     align-content: center;
     display: flex;
     justify-content: center;
+    ;
+
 }
 
 .col-sm-6 {
@@ -77,12 +122,8 @@ button {
 
 input {
     border-radius: 20px 20px 20px 20px;
-    border: 10px;
+    border: 9px;
     box-shadow: 0 1px 1px 0 rgba(254, 248, 209, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-input:hover {
-    box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.1), 0 1px 10px 0 rgba(255, 255, 255, 0.1);
 }
 
 .allinea {
@@ -97,6 +138,7 @@ aside {
     float: left;
     width: 20%;
     height: 20%;
+
     border-right: solid rgb(0, 0, 0, 0.1);
     box-shadow: black 50%;
     display: flex;
