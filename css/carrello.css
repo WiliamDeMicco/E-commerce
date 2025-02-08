@@ -177,3 +177,7 @@ footer {
 .privacy-link:hover {
     text-decoration: underline;
 }
+
+a:link {
+    text-decoration: none;
+}
