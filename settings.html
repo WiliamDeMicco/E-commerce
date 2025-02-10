@@ -15,47 +15,40 @@
 
 <body>
     <div class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Carrello</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Profilo
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Info Profilo</a></li>
-                                <li><a class="dropdown-item" href="#">I Miei Ordini</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Assistenza</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a id="bottonelogo" class="navbar-brand m-2 p-1" href="#">
+              <img src="/img/Shoppone vero.png" alt="logo" width="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link m-2" href="#">Carrello</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle m-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profilo</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Info Profilo</a></li>
+                    <li><a class="dropdown-item" href="#">I Miei Ordini</a></li>
+                    <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Ricerca prodotto" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Cerca</button>
+              </form>
+              <div class="auth-links d-flex align-items-center ms-3">
+                <a class="fa fa-sign-in me-3" href="#"></a>
+                <a class="fa fa-user-plus" href="#"></a>
+              </div>
             </div>
+          </div>
         </nav>
-    </div>
+      </div>
     <!--SIDEBAR-->
     <aside mt-5>
         <h5>My Orders</h5>
@@ -144,21 +137,29 @@
             </div>
         </form>
     </div>
-    <div class="container-footer">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a>
-                </li>
-            </ul>
-            <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+    <div class="container-fluid fine-pagina">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mb-0 fine-pagina">
+          <div class="social-icons d-flex align-items-center">
+          </div>
+          <div class="text-center">
+            <div class="social-icons d-flex align-items-center">
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fa-solid fa-x"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+              </div>
+            <span class="text-body-secondary">&copy; 2025 GWALLERY SRL - P.IVA 11234567890</span>
+            <div>
+            <a href="#" class="privacy-link">Privacy Policy</a> <span >|</span>
+            <a href="#" class="privacy-link">Condizioni Generali di Uso e Vendita</a> <span>|</span>
+            <a href="#" class="privacy-link">Informativa sulla Privacy</a>
+        </div>
+          </div>
+          <div class="social-icons d-flex align-items-center">
+          </div>
         </footer>
-    </div>
+      </div>  
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
