@@ -82,20 +82,21 @@
   <!-- suggerimento: riga, due colonne, riga nella seconda colonna-->
 
   <!--SEZIONE RISULTATI RICERCA (per filtro) E PRODOTTI-->
-  <div class="shop-container container-fluid m-4 p-2">
+  <div class="shop-container container m-4 p-2">
     <div class="row">
-      <div class="filtri p-4 col-xs-12 col-sm-12 col-md-12	col-lg-3">
+      <div class="filtri p-4 col-xs-12 col-sm-12 col-md-12 col-lg-2">
         <form action="">
           <p>Categoria</p>
-          <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="selectCategoria">
+          <select class="form-select form-select-lg mb-" aria-label="Large select example" id="selectCategoria">
             <option value="1" selected>Tutti i prodotti</option>
             <option value="2">Abbigliamento Uomo</option>
             <option value="3">Abbigliamento Donna</option>
             <option value="4">Gioielleria</option>
           </select>
+          <br>
           <div class="price">
           <label for="customRange2" class="form-label">Prezzo</label>
-          <p id="valore">0 €</p>
+          <p id="valore" class="mb-0">0 €</p>
           </div>
           <input type="range" class="form-range" min="0" max="2" id="rangePrezzo">
 
@@ -139,8 +140,7 @@
         
       </div>
       
-      <div class="col-xs-12	col-sm-12	col-md-12	col-lg-8 risultati" id="risultati">
-        
+      <div class="col-xs-12	col-sm-12	col-md-12	col-lg-9 risultati" id="risultati">
         
       </div>
       

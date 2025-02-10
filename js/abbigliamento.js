@@ -11,7 +11,7 @@ fetch('https://fakestoreapi.com/products')
             <div class="card-body">
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">€ ${product.price}</p>
-                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Dettagli</a>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary ">Dettagli</a>
             </div>
         </div>
     `;

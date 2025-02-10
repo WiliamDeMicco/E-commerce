@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-*{
+* {
     font-family: 'Geologica', serif;
 }
 
-.sfondo-head{
+.sfondo-head {
     display: flex;
     background-image: url(/img/SOFT_RED_BANNER.png);
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.text-head{
+.text-head {
     padding: 10%;
     top: 50%;
     width: 100%;
@@ -23,10 +23,10 @@
     z-index: 1;
     color: #e4aaa3;
     text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
-    1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
 
-.search-bar{
+.search-bar {
     background-color: #fef8d1;
     border-radius: 30px;
     height: auto;
@@ -36,41 +36,39 @@
     box-shadow: 3px 3px #ddd7ac;
 }
 
-#tasto-ricerca{
+#tasto-ricerca {
     background-color: #fef8d1;
     border-radius: 30px;
 }
 
-#bottone-ricerca{
+#bottone-ricerca {
     border-radius: 30px;
 }
 
-#bottone-ricerca:hover{
+#bottone-ricerca:hover {
     border-radius: 30px;
     background-color: #e4aaa3;
     color: #fef8d1;
 }
 
-.ricerca{
+.ricerca {
     margin-bottom: -10px;
 }
 
-.shop-container{
+.shop-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.risultati{
+.risultati {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: flex-start;
+    flex-flow: row wrap;    
     padding-left: 5em !important;
 }
 
-.filtri{
+.filtri {
     border: none;
     border-radius: 10px;
     width: auto !important;
@@ -80,9 +78,9 @@
     box-shadow: 3px 3px #e4a9a367;
 }
 
-.card{
+.card {
     border: none !important;
-    width: 14rem;
+    width: 12rem;
     height: 1em;
     margin: 1rem;
     box-shadow: 3px 3px #e4a9a367;
@@ -91,32 +89,106 @@
     justify-content: center;
 }
 
-.card img{
+.card img {
     width: 7em;
 }
 
-.card p{
+.card p {
     font-size: 1em;
 }
 
-.bi-star-fill{
+.bi-star-fill {
     margin-top: -2.5%;
 }
 
-.card .img{
-    width: 15em;
-    height: 15em;
+.card .img {
+    width: 12em;
+    height: 12em;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform .4s;
 }
 
-.card .img:hover{
+.card .img:hover {
     transform: scale(1.2);
 }
 
-.price{
+.price {
     display: flex;
     justify-content: space-between;
+}
+
+#rangePrezzo::-webkit-slider-thumb:hover {
+    background: #e4aaa3 !important;
+}
+
+#rangePrezzo::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #e4aaa3 !important;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s ease;
+}
+
+#rangePrezzo::-webkit-slider-thumb:hover {
+    background: #e4aaa3 !important;
+}
+
+#resetFilter {
+    background: #e4aaa3 !important;
+    border: none;
+    color: black;
+}
+
+#selectCategoria {
+    background-color: #e4aaa3;
+    color: black;
+    border-color: #e4aaa3;
+}
+
+#selectCategoria:hover {
+    background-color: #e4aaa3;
+    color: black;
+}
+
+#selectCategoria {
+    border: 2px solid #e4aaa3;
+    border-radius: 5px;
+}
+
+
+#selectCategoria:hover {
+    border-color: #e4aaa3;
+}
+
+#selectCategoria {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#selectCategoria:hover {
+    border-color: #e4aaa3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#selectCategoria option {
+    background-color: #e4aaa3;
+    color: black;
+    border-radius: 5px !important;
+}
+
+
+#selectCategoria option:hover {
+    background-color: #e4aaa3;
+}
+
+.btn-primary{
+    background: #e4aaa3 !important;
+    border: none !important;
+    color: black !important;
 }
