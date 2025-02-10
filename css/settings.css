@@ -1,18 +1,21 @@
+body {}
+
 .header a {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding: 0px 0px;
+
 }
 
 .header a {
     float: left;
-    color: black;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
-    border-radius: 4px;
+
 }
 
 .header a.logo {
@@ -22,17 +25,75 @@
 }
 
 .header a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #ffffff;
+    color: rgb(177, 77, 64);
 }
 
+/* Style the active/current link*/
 .header a.active {
-    background-color: dodgerblue;
+    background-color: rgb(143, 90, 90);
     color: white;
+    border: black 10px;
+    border-style: solid;
+    border-width: 1px;
 }
 
+.container-card {
+    background-image: url(/img/SOFT_YELLOW_BANNER.png );
+    box-shadow: 0 1px 1px 0 rgba(254, 248, 209, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Float the link section to the right */
 .header-right {
     float: right;
+}
+
+#bottonelogo {
+    background-color: #f8f9fa00 !important;
+}
+
+#selectCategoria {
+    background-color: #e4aaa3;
+    color: white;
+    border-color: #fef8d1;
+
+}
+
+#selectCategoria:hover {
+    background-color: #e4aaa3;
+    color: #fef8d1;
+}
+
+#selectCategoria {
+    border: 2px solid #e4aaa3;
+    border-radius: 5px;
+}
+
+#selectCategoria:hover {
+    border-color: #e4aaa3;
+}
+
+#selectCategoria {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#selectCategoria:hover {
+    border-color: #e4aaa3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#selectCategoria option {
+    background-color: #e4aaa3;
+    color: white;
+    border-radius: 5px !important;
+}
+
+
+#selectCategoria option:hover {
+    background-color: #e4aaa3;
 }
 
 h1 {
@@ -50,6 +111,8 @@ button {
     align-content: center;
     display: flex;
     justify-content: center;
+    ;
+
 }
 
 .col-sm-6 {
@@ -59,12 +122,8 @@ button {
 
 input {
     border-radius: 20px 20px 20px 20px;
-    border: 10px;
+    border: 9px;
     box-shadow: 0 1px 1px 0 rgba(254, 248, 209, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-input:hover {
-    box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.1), 0 1px 10px 0 rgba(255, 255, 255, 0.1);
 }
 
 .allinea {
@@ -75,24 +134,40 @@ input:hover {
 }
 
 aside {
+    margin-left: -2%;
     float: left;
+    width: 20%;
+    height: 20%;
+
     border-right: solid rgb(0, 0, 0, 0.1);
     box-shadow: black 50%;
-    position: sticky;
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 40%;
+    margin-top: 18%;
     align-items: center;
     padding-right: 1%;
     padding-left: 1%;
+    z-index: 0;
 }
+
+
 
 aside:hover {
     background-color: aliceblue;
-    color: green
+    color: green;
 }
 
-h5:hover {
+.tooltiptext {
+    padding-left: 20%;
+
+}
+
+h6 {
+
+    padding-right: 20%;
+}
+
+h6:hover {
     color: black;
 }
