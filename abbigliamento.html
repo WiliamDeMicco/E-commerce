@@ -13,43 +13,36 @@
 <body>
 
   <div class="header">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a id="bottonelogo" class="navbar-brand m-2 p-1" href="#">
+          <img src="/img/Shoppone vero.png" alt="logo" width="100">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link m-2" href="#">Carrello</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
-              </a>
+              <a class="nav-link dropdown-toggle m-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profilo</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#">Info Profilo</a></li>
+                <li><a class="dropdown-item" href="#">I Miei Ordini</a></li>
+                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Ricerca prodotto" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Cerca</button>
           </form>
+          <div class="auth-links d-flex align-items-center ms-3">
+            <a class="fa fa-sign-in me-3" href="#"></a>
+            <a class="fa fa-user-plus" href="#"></a>
+          </div>
         </div>
       </div>
     </nav>
@@ -78,24 +71,23 @@
       </div>
     </div>
   </div>
-
-  <!-- suggerimento: riga, due colonne, riga nella seconda colonna-->
-
+  
   <!--SEZIONE RISULTATI RICERCA (per filtro) E PRODOTTI-->
   <div class="shop-container container-fluid m-4 p-2">
-    <div class="row">
-      <div class="filtri p-4 col-xs-12 col-sm-12 col-md-12	col-lg-3">
+    <div class="row ml-5">
+      <div class="filtri p-4 col-xs-12 col-sm-12 col-md-12 col-lg-2 ml-4">
         <form action="">
           <p>Categoria</p>
-          <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="selectCategoria">
+          <select class="form-select form-select-lg mb-" aria-label="Large select example" id="selectCategoria">
             <option value="1" selected>Tutti i prodotti</option>
             <option value="2">Abbigliamento Uomo</option>
             <option value="3">Abbigliamento Donna</option>
             <option value="4">Gioielleria</option>
           </select>
+          <br>
           <div class="price">
           <label for="customRange2" class="form-label">Prezzo</label>
-          <p id="valore">0 €</p>
+          <p id="valore" class="mb-0">0 €</p>
           </div>
           <input type="range" class="form-range" min="0" max="2" id="rangePrezzo">
 
@@ -141,11 +133,32 @@
       
       <div class="col-xs-12	col-sm-12	col-md-12	col-lg-8 risultati" id="risultati">
         
-        
       </div>
       
     </div>
   </div>
+  <div class="container-fluid fine-pagina">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mb-0 fine-pagina">
+      <div class="social-icons d-flex align-items-center">
+      </div>
+      <div class="text-center">
+        <div class="social-icons d-flex align-items-center">
+            <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fa-solid fa-x"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        <span class="text-body-secondary">&copy; 2025 GWALLERY SRL - P.IVA 11234567890</span>
+        <div>
+        <a href="#" class="privacy-link">Privacy Policy</a> <span >|</span>
+        <a href="#" class="privacy-link">Condizioni Generali di Uso e Vendita</a> <span>|</span>
+        <a href="#" class="privacy-link">Informativa sulla Privacy</a>
+    </div>
+      </div>
+      <div class="social-icons d-flex align-items-center">
+      </div>
+    </footer>
+  </div>  
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -5,22 +5,35 @@ function getQueryParam(param) {
 
 const productId = getQueryParam('id');
 
+
 fetch('https://fakestoreapi.com/products/' + productId)
     .then(response => response.json())
     .then(product => {
         const container = document.getElementById('dettaglio');
         container.innerHTML = `
-        <div class="card>
-                        <div class="img"> 
-                        <img src="${product.image}" class="card-img-top" alt="${product.title}">
-                    </div>
-                <div class="card-body">
+            <div class="row">
+                <div class="img col-3 mr-1"> 
+                    <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                </div>
+                <div class="col-7 ml-2">
                     <h5 class="card-title">${product.title}</h5>
-                    <p class="card-text">€ ${product.description}</p>
-                    <p class="card-text">€ ${product.price}</p>
-                    <a href="index.html" class="btn btn-primary">← Torna alla Home</a>
+                    <br>
+                    <h1 class="card-text">€ ${product.price}</h1>
+                    <br>
+                    <p>
+                        Descrizione prodotto
+                    </p>
+                    <div>
+                        <div class="card card-body">
+                        ${product.description}
+                        </div>
+                    </div>
+                    <br><br>
+                    <a href="abbigliamento.html" class="btn btn-primary bottoneDettaglio">← Torna alla pagina prodotti</a>
                 </div>
-                </div>
-          `;
+            </div>`;
     })
     .catch(error => console.error('Errore nel recupero del prodotto:', error));
+
+
+    
