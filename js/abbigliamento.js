@@ -11,7 +11,7 @@ fetch('https://fakestoreapi.com/products')
             <div class="card-body">
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">€ ${product.price}</p>
-                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary ">Dettagli</a>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary ">Scopri di più</a>
             </div>
         </div>
     `;
@@ -52,7 +52,7 @@ function displayAll() {
             <div class="card-body">
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">€ ${product.price}</p>
-                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Dettagli</a>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Scopri di più</a>
             </div>
         </div>
     `;
@@ -102,7 +102,7 @@ function mostraPerPrezzo() {
                 <div class="card-body">
                     <h5 class="card-title">${product.title}</h5>
                     <p class="card-text">€ ${product.price}</p>
-                    <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Dettagli</a>
+                    <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Scopri di più</a>
                 </div>
                 </div>`;
                 }
@@ -130,7 +130,7 @@ reset.addEventListener('click', () => {
             <div class="card-body">
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">€ ${product.price}</p>
-                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Dettagli</a>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Scopri di più</a>
             </div>
         </div>
     `;
@@ -139,3 +139,41 @@ reset.addEventListener('click', () => {
         })
         .catch(error => console.error('Errore nel recupero dei prodotti:', error));
 });
+
+const searchInput = document.getElementById('tasto-ricerca');
+
+function mostraRicerca(query){
+
+    fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(products => {
+            const productsCards = products.map(product => {
+                product.price.toString();
+                if (product.price.search(query)) {
+                    return `
+                    <div class="card">
+                        <div class="img"> 
+                        <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                    </div>
+                <div class="card-body">
+                    <h5 class="card-title">${product.title}</h5>
+                    <p class="card-text">€ ${product.price}</p>
+                    <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Scopri di più</a>
+                </div>
+                </div>`;
+                }
+            }).join('');
+            container.innerHTML = productsCards;
+        })
+        .catch(error => console.error('Errore nel recupero dei prodotti:', error));
+}
+
+const searchProdotto = document.getElementById('bottone-ricerca');
+
+searchProdotto.addEventListener('click', (e) => {
+    e.preventDefault();
+    const query = searchInput.value.trim();
+    if (query) {
+        mostraRicerca(query);
+    }
+  });

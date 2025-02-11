@@ -1,56 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 .header {
     background-color: #ffffff;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
-  }
-  
-  .navbar-nav .nav-link {
+}
+
+.navbar-nav .nav-link {
     font-size: 18px;
     color: #000;
     transition: color 0.3s;
-  }
-  
-  .navbar-nav .nav-link:hover {
+}
+
+.navbar-nav .nav-link:hover {
     color: #b14d40;
-  }
-  
-  .navbar-brand img {
+}
+
+.navbar-brand img {
     max-width: 100px;
-  }
-  
-  .auth-links a {
+}
+
+.auth-links a {
     font-size: 20px;
     color: #000;
     text-decoration: none;
     transition: color 0.3s;
-  }
-  
-  .auth-links a:hover {
+}
+
+.auth-links a:hover {
     color: #b14d40;
-  }
-  
-  .navbar-toggler {
+}
+
+.navbar-toggler {
     border: none;
     outline: none;
-  }
-*{
+}
+
+* {
     font-family: 'Geologica', serif;
 }
 
-.dettaglio{
+.dettaglio {
     display: flex;
-    align-items: center;
+    align-items: space-between;
     justify-content: center;
 }
-.card{
+
+.dettaglio img {
     width: 15em;
 }
-.card img{
-    width: 15em;
-}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -63,46 +64,58 @@ footer {
     padding: 10px 20px;
     text-align: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
     display: flex;
     gap: 15px;
-  }
-  
-  .social-link {
+}
+
+.social-link {
     text-decoration: none;
     color: inherit;
     font-size: 20px !important;
     transition: color 0.3s;
-  }
-  
-  footer .social-icons .social-link:hover {
+}
+
+footer .social-icons .social-link:hover {
     color: #007bff !important;
-  }
-  
-  .privacy-link {
+}
+
+.privacy-link {
     font-size: 14px;
     color: #007bff;
     text-decoration: none;
     margin: 0 5px;
-  }
-  
-  .privacy-link:hover {
+}
+
+.privacy-link:hover {
     text-decoration: underline;
-  }
-  i{
+}
+
+i {
     color: #000 !important;
     font-size: 20px;
-  }
-  .text-center{
+}
+
+.text-center {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .privacy-link{
+}
+
+.privacy-link {
     display: inline;
-  
-  }
-  
+
+}
+
+.btn-primary {
+    background: #e4aaa3 !important;
+    border: none !important;
+    color: black !important;
+}
+
+.occasioni img{
+    width: 25rem !important; 
+}
