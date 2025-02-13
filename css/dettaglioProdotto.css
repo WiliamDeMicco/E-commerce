@@ -119,3 +119,52 @@ i {
 .occasioni img{
     width: 25rem !important; 
 }
+
+.MultiCarousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.MultiCarousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.MultiCarousel .item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.MultiCarousel .item img {
+    width: 100%;
+    height: auto;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.MultiCarousel .leftLst {
+    left: 10px;
+}
+
+.MultiCarousel .rightLst {
+    right: 10px;
+}
+
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
+    pointer-events: none;
+    background-color: #ccc;
+}
