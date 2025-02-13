@@ -192,3 +192,14 @@
     border: none !important;
     color: black !important;
 }
+
+.card-title{
+    width: 100%;
+}
+
+.discover_more{
+    position: relative;
+    margin-top: 10px; 
+    width: 50%; 
+}
+

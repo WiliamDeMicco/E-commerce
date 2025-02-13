@@ -8,10 +8,10 @@ fetch('https://fakestoreapi.com/products')
             <div class="img"> 
                 <img src="${product.image}" class="card-img-top" alt="${product.title}">
             </div>
-            <div class="card-body">
+            <div class="card-body d-flex flex-column justify-content-between container-fluid">
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">€ ${product.price}</p>
-                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary ">Scopri di più</a>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary discover_more">Scopri di più</a>
             </div>
         </div>
     `;
@@ -49,10 +49,10 @@ function displayAll() {
             <div class="img"> 
                 <img src="${product.image}" class="card-img-top" alt="${product.title}">
             </div>
-            <div class="card-body">
+            <div class="card-body d-flex flex-column justify-content-between container-fluid">
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">€ ${product.price}</p>
-                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Scopri di più</a>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary discover_more">Scopri di più</a>
             </div>
         </div>
     `;
@@ -96,15 +96,15 @@ function mostraPerPrezzo() {
                 if (minrange <= product.price && maxrange > product.price) {
                     return `
                     <div class="card">
-                        <div class="img"> 
-                        <img src="${product.image}" class="card-img-top" alt="${product.title}">
-                    </div>
-                <div class="card-body">
-                    <h5 class="card-title">${product.title}</h5>
-                    <p class="card-text">€ ${product.price}</p>
-                    <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Scopri di più</a>
-                </div>
-                </div>`;
+            <div class="img"> 
+                <img src="${product.image}" class="card-img-top" alt="${product.title}">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between container-fluid">
+                <h5 class="card-title">${product.title}</h5>
+                <p class="card-text">€ ${product.price}</p>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary discover_more">Scopri di più</a>
+            </div>
+        </div>`;
                 }
             }).join('');
             container.innerHTML = productsCards;
@@ -127,10 +127,10 @@ reset.addEventListener('click', () => {
             <div class="img"> 
                 <img src="${product.image}" class="card-img-top" alt="${product.title}">
             </div>
-            <div class="card-body">
+            <div class="card-body d-flex flex-column justify-content-between container-fluid">
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">€ ${product.price}</p>
-                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Scopri di più</a>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary discover_more">Scopri di più</a>
             </div>
         </div>
     `;
@@ -152,15 +152,15 @@ function mostraRicerca(query){
                 if (product.price.search(query)) {
                     return `
                     <div class="card">
-                        <div class="img"> 
-                        <img src="${product.image}" class="card-img-top" alt="${product.title}">
-                    </div>
-                <div class="card-body">
-                    <h5 class="card-title">${product.title}</h5>
-                    <p class="card-text">€ ${product.price}</p>
-                    <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary">Scopri di più</a>
-                </div>
-                </div>`;
+            <div class="img"> 
+                <img src="${product.image}" class="card-img-top" alt="${product.title}">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between container-fluid">
+                <h5 class="card-title">${product.title}</h5>
+                <p class="card-text mt-0">€ ${product.price}</p>
+                <a href="dettaglioProdotto.html?id=${product.id}" class="btn btn-primary discover_more">Scopri di più</a>
+            </div>
+        </div>`;
                 }
             }).join('');
             container.innerHTML = productsCards;
