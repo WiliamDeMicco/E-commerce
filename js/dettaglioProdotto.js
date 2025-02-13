@@ -29,6 +29,7 @@ fetch('https://fakestoreapi.com/products/' + productId)
                         </div>
                     </div>
                     <br><br>
+                    <a href="carrello.html" class="btn">Aggiungi al carrello</a><br>
                     <a href="abbigliamento.html" class="btn btn-primary bottoneDettaglio">← Torna alla pagina prodotti</a>
                 </div>
             </div>`;
@@ -37,3 +38,18 @@ fetch('https://fakestoreapi.com/products/' + productId)
 
 
     
+    /* 
+        const container = document.getElementById('articolo');
+        container.innerHTML=`
+        <li>{product.description}</li>
+        `
+        const riepilogo = document.getElementById('lista_prezzi');
+        container.innerHTML=`
+        <li>{product.price}</li>
+        `
+
+        const riepilogo = document.getElementById('lista_riepilogo');
+        riepilogo.innerHTML=`
+        <li>x1 {product.title} = {product.price}</li>
+        `
+    */
