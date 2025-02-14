@@ -37,7 +37,7 @@ fetch('https://fakestoreapi.com/products/' + productId)
     .catch(error => console.error('Errore nel recupero del prodotto:', error));
 
     
-    function apertura(){ fetch('https://fakestoreapi.com/products')
+     fetch('https://fakestoreapi.com/products')
         .then(response => response.json())
         .then(product => {
             const Carosello = document.getElementById('Carosello');
@@ -49,11 +49,11 @@ fetch('https://fakestoreapi.com/products/' + productId)
                     <br>
                     <h1>€${product.price}</h1>
                 </div>
-                `
+                `;
+                console.log("chiamata effettuata con successo");
         })
-      .catch(error => console.error('Errore nel recupero del prodotto:', error));}
+      .catch(error => console.error('Errore nel recupero del prodotto:', error));
 
-    document.addEventListener('load', apertura);
     /* 
         const container = document.getElementById('articolo');
         container.innerHTML=`
