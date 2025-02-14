@@ -9,7 +9,7 @@ const productId = getQueryParam('id');
 fetch('https://fakestoreapi.com/products/' + productId)
     .then(response => response.json())
     .then(product => {
-        const container = document.getElementById('dettaglio');
+        const container = document.getElementById('dettaglio');     // punto l'elemento dove voglio inserire quello che segue
         container.innerHTML = `
             <div class="row">
                 <div class="img col-3 mr-1"> 
@@ -35,8 +35,6 @@ fetch('https://fakestoreapi.com/products/' + productId)
             </div>`;
     })
     .catch(error => console.error('Errore nel recupero del prodotto:', error));
-
-
     
     /* 
         const container = document.getElementById('articolo');
