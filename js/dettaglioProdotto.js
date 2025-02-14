@@ -35,7 +35,25 @@ fetch('https://fakestoreapi.com/products/' + productId)
             </div>`;
     })
     .catch(error => console.error('Errore nel recupero del prodotto:', error));
+
     
+     fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(product => {
+            const Carosello = document.getElementById('Carosello');
+            Carosello.innerHTML = `
+           
+                <div class="item">
+                    <img src="${product.title}" alt="${product.title}"> 
+                    <h4>${product.title}</h4>
+                    <br>
+                    <h1>€${product.price}</h1>
+                </div>
+                `;
+                console.log("chiamata effettuata con successo");
+        })
+      .catch(error => console.error('Errore nel recupero del prodotto:', error));
+
     /* 
         const container = document.getElementById('articolo');
         container.innerHTML=`
@@ -51,3 +69,5 @@ fetch('https://fakestoreapi.com/products/' + productId)
         <li>x1 {product.title} = {product.price}</li>
         `
     */
+        
+        

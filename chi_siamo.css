@@ -1,3 +1,15 @@
+body {
+  background-color: #b14d40 !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  font-family: 'Geologica', serif;
+}
+
+
 .header {
   background-color: #ffffff;
   padding: 10px 0;
@@ -33,40 +45,6 @@
 .navbar-toggler {
   border: none;
   outline: none;
-}
-
-.bloccoCentrale {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-
-}
-
-#right {
-  transform: rotate(1800deg);
-}
-
-.Triangolo {
-  transform: scale(1.5);
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  transform: rotate(90deg);
-  justify-content: center;
-  align-items: center;
-  width: 600px;
-  gap: 10px;
-}
-
-.Triangolo .card {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  margin: 0 -75px;
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 
 footer {
@@ -125,4 +103,71 @@ i {
 .privacy-link {
   display: inline;
 
+}
+
+.right {
+  transform: rotate(90deg);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  width: 250px
+}
+
+.left {
+  transform: rotate(270deg);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  width: 250px
+}
+
+.up {
+  transform: rotate(180deg);
+  margin-bottom: 11%;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  width: 250px;
+}
+
+.down {
+  margin-top: 11%;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  width: 250px;
+}
+
+.blocco-centrale img {
+
+  object-fit: cover;
+}
+
+.blocco-centrale .image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.blocco-centrale:hover {
+  background-image: url(img/SHOPPONE__1_-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.blocco-centrale .overlay-text {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.blocco-centrale:hover .overlay-text {
+  visibility: visible;
+}
+
+.overlay-text {
+  font-size: smaller;
+  color: #000;
+  background-color: #b14d40;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  z-index: 100;
 }
