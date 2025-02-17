@@ -46,13 +46,13 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link m-2" href="chi_siamo.html">Chi siamo</a>
-                          </li>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle m-2" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Profilo</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="settings.html">Info Profilo</a></li>
-                                <li><a class="dropdown-item" href="#">I Miei Ordini</a></li>
+                                <li><a class="dropdown-item" href="ordini.html">I Miei Ordini</a></li>
                                 <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                             </ul>
                         </li>
@@ -63,7 +63,7 @@
                         <button class="btn btn-outline-success" type="submit">Cerca</button>
                     </form>
                     <div class="auth-links d-flex align-items-center ms-3">
-                        <a class="fa fa-sign-in me-3" href="#"></a>
+                        <a class="fa fa-sign-in me-3" href="login.html"></a>
                         <a class="fa fa-user-plus" href="#"></a>
                     </div>
                 </div>
@@ -98,6 +98,7 @@
                                 <div data-mdb-input-init class="form-outline form-white mb-4">
                                     <input type="password" id="typePasswordLog" class="form-control form-control-lg" />
                                     <label class="form-label" for="typePasswordLog">Password</label>
+
                                 </div>
 
                                 <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Hai dimenticato la
@@ -181,7 +182,8 @@
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline form-white mb-4">
-                                        <input type="email" id="typeEmailX" class="form-control form-control-lg" required />
+                                        <input type="email" id="typeEmailX" class="form-control form-control-lg"
+                                            required />
                                         <label class="form-label" for="typeEmailX">Email</label>
                                     </div>
 
@@ -192,18 +194,17 @@
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline form-white mb-4">
-                                        <input type="password" id="creapw" class="form-control form-control-lg" minlength="6" required />
+                                        <input type="password" id="creapw" class="form-control form-control-lg"
+                                            minlength="6" required />
                                         <label class="form-label" for="typePasswordX">Password</label>
-                                        <i id="togglePassword" class="bi bi-eye-slash"
-                                            style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
+
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline form-white mb-4">
                                         <input type="password" id="confermapw" class="form-control form-control-lg"
                                             required />
                                         <label class="form-label" for="typePasswordX">Conferma Password</label>
-                                        <i id="togglePassword" class="bi bi-eye-slash"
-                                            style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
+
                                     </div>
 
 
@@ -213,6 +214,13 @@
                                         type="submit">Completa
                                         Registrazione!</button>
                                 </form>
+                            </div>
+
+                            <div>
+                                <p class="mb-0 text-center">Sei già registrato?<button data-mdb-button-init
+                                        data-mdb-ripple-init id="accedi" class="btn btn-outline-black btn-lg px-1"
+                                        style="font-size: 15px; color:#d68a80;" type="submit">Accedi!</button>
+                                </p>
                             </div>
 
                         </div>
