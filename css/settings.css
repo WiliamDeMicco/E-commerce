@@ -178,6 +178,9 @@ footer {
     text-align: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   }
+  svg text{
+    font-family: FontAwesome !important;
+  }
   @media (max-width: 480px) {
     footer {
       flex-direction: column;
@@ -202,6 +205,8 @@ footer {
     
     i {
       font-size: 18px;
+      margin: 0 10px;
+      color: #333;
     }
   }
 
