@@ -9,7 +9,7 @@ const productId = getQueryParam('id');
 fetch('https://fakestoreapi.com/products/' + productId)
     .then(response => response.json())
     .then(product => {
-        const container = document.getElementById('dettaglio');
+        const container = document.getElementById('dettaglio');     // punto l'elemento dove voglio inserire quello che segue
         container.innerHTML = `
             <div class="row">
                 <div class="img col-3 mr-1"> 
@@ -36,8 +36,24 @@ fetch('https://fakestoreapi.com/products/' + productId)
     })
     .catch(error => console.error('Errore nel recupero del prodotto:', error));
 
-
     
+     fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(product => {
+            const Carosello = document.getElementById('Carosello');
+            Carosello.innerHTML = `
+           
+                <div class="item">
+                    <img src="${product.title}" alt="${product.title}"> 
+                    <h4>${product.title}</h4>
+                    <br>
+                    <h1>€${product.price}</h1>
+                </div>
+                `;
+                console.log("chiamata effettuata con successo");
+        })
+      .catch(error => console.error('Errore nel recupero del prodotto:', error));
+
     /* 
         const container = document.getElementById('articolo');
         container.innerHTML=`
@@ -53,51 +69,5 @@ fetch('https://fakestoreapi.com/products/' + productId)
         <li>x1 {product.title} = {product.price}</li>
         `
     */
-        $(document).ready(function () {
-            var itemWidth = 0;
-            var totalItems = $('.MultiCarousel-inner .item').length;
-            var visibleItems = 3; // Numero di elementi visibili per volta
-            var currentIndex = 0; // Indice dell'elemento visibile attualmente
         
-            // Impostazione della larghezza degli items
-            function setItemWidth() {
-                var containerWidth = $('.MultiCarousel').width();
-                itemWidth = containerWidth / visibleItems;
-                $('.MultiCarousel-inner .item').width(itemWidth);
-                $('.MultiCarousel-inner').width(itemWidth * totalItems);
-            }
-        
-            // Funzione per spostare il carosello a sinistra
-            function moveLeft() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    $('.MultiCarousel-inner').css('transform', 'translateX(' + (-itemWidth * currentIndex) + 'px)');
-                }
-            }
-        
-            // Funzione per spostare il carosello a destra
-            function moveRight() {
-                if (currentIndex < totalItems - visibleItems) {
-                    currentIndex++;
-                    $('.MultiCarousel-inner').css('transform', 'translateX(' + (-itemWidth * currentIndex) + 'px)');
-                }
-            }
-        
-            // Event listener per i bottoni
-            $('.leftLst').click(function () {
-                moveLeft();
-            });
-        
-            $('.rightLst').click(function () {
-                moveRight();
-            });
-        
-            // Inizializzazione
-            setItemWidth();
-        
-            // Ricalcolare la larghezza quando la finestra cambia dimensione
-            $(window).resize(function () {
-                setItemWidth();
-            });
-        });
         
