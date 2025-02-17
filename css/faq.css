@@ -7,37 +7,38 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     z-index: 50 !important;
-  }
-  
-  .navbar-nav .nav-link {
+}
+
+.navbar-nav .nav-link {
     font-size: 18px;
     color: #000;
     transition: color 0.3s;
-  }
-  
-  .navbar-nav .nav-link:hover {
+}
+
+.navbar-nav .nav-link:hover {
     color: #b14d40;
-  }
-  
-  .navbar-brand img {
+}
+
+.navbar-brand img {
     max-width: 100px;
-  }
-  
-  .auth-links a {
+}
+
+.auth-links a {
     font-size: 20px;
     color: #000;
     text-decoration: none;
     transition: color 0.3s;
-  }
-  
-  .auth-links a:hover {
+}
+
+.auth-links a:hover {
     color: #b14d40;
-  }
-  
-  .navbar-toggler {
+}
+
+.navbar-toggler {
     border: none;
     outline: none;
-  }
+}
+
 .centrale {
     background: url(/img/SOFT_RED_BANNER.png) no-repeat center center fixed;
     -moz-background-size: cover;
@@ -55,7 +56,7 @@
     display: flex;
     justify-content: center;
     color: #FFCD66;
-    height: auto ! important;
+    height: auto !important;
     top: 0;
 }
 
@@ -81,12 +82,13 @@
     border-top: 7em solid #fef8d1;
 }
 
-.domande{
+.domande {
     margin: 0% 10% !important;
 }
+
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     left: 0;
@@ -96,45 +98,79 @@ footer {
     padding: 10px 20px;
     text-align: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .social-icons {
+    flex-direction: column;
+}
+
+.social-icons {
     display: flex;
     gap: 15px;
-  }
-  
-  .social-link {
+    justify-content: center;
+}
+
+.social-link {
     text-decoration: none;
     color: inherit;
     font-size: 20px !important;
     transition: color 0.3s;
-  }
-  
- footer .social-icons .social-link:hover {
+}
+
+footer .social-icons .social-link:hover {
     color: #007bff !important;
-  }
-  
-  .privacy-link {
+}
+
+.privacy-link {
     font-size: 14px;
     color: #007bff;
     text-decoration: none;
     margin: 0 5px;
-  }
-  
-  .privacy-link:hover {
+}
+
+.privacy-link:hover {
     text-decoration: underline;
-  }
-  i{
+}
+
+i {
     color: #000 !important;
     font-size: 20px;
-  }
-  .text-center{
+}
+
+.text-center {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .privacy-link{
-    display: inline;
+}
 
-  }
+.privacy-link {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 20px;
+        flex-direction: column;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .privacy-link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 15px;
+        flex-direction: column;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .privacy-link {
+        font-size: 10px;
+    }
+}
