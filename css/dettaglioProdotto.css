@@ -58,7 +58,7 @@ footer {
     align-items: center;
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 0;  
     width: 100%;
     background-color: whitesmoke;
     padding: 10px 20px;
@@ -116,44 +116,63 @@ i {
     color: black !important;
 }
 
-.occasioni img{
-    width: 25rem !important; 
+#carosello {
+  width: 50%;
+  height: 100px;
 }
 
-.carousel-container {
-    width: 300px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
+#carosello > .card {
+  margin: 10px !important;
+  border: 2px whitesmoke solid;
 }
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+
+#carosello > .card-body {
+ width: 10px !important;
+ max-height: 100px !important;
 }
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    text-align: center;
+
+.btn-primary{
+  background: #e4aaa3 !important;
+  border: none !important;
+  color: black !important;
 }
-.carousel-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+
+.card-title{
+  width: 100%;
 }
-.controls {
-    margin-top: 10px;
+
+.discover_more{
+  position: relative;
+  margin-top: 10px; 
+  width: 100%; 
 }
-.btn {
-    padding: 5px 10px;
-    margin: 5px;
-    cursor: pointer;
-    border: none;
-    background: #007bff;
-    color: white;
-    border-radius: 5px;
+
+.consigliati{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
-.btn:disabled {
-    background: #ccc;
-    cursor: not-allowed;
+
+.consigliati img{
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.card-group{
+  width: 40% !important;
+  height: 25% !important;
+}
+
+.blocco-centrale{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.blocco-centrale p{
+  font-size: larger;
+  font-size: 2rem;
 }
