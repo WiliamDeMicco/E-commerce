@@ -1,4 +1,14 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque !important;
+}
+
 .header {
   background-color: #ffffff;
   padding: 10px 0;
@@ -35,67 +45,48 @@
   border: none;
   outline: none;
 }
-  
-  
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other 
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .header-right {
-      float: none;
-    }
-  }
-*/
 
-*
-body{
-background-color: bisque !important;
+.bloccoCentrale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: bisque;
 }
-.bloccoCentrale
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: bisque;
-    
-}
-.Triangolo
-{
+
+.Triangolo {
   transform: scale(1.5);
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    gap: 10px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  gap: 10px;
 }
-.Triangolo .card
-{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    margin: 0 -75px;
-   clip-path: polygon(50% 100%, 0 0, 100% 0);
+
+.Triangolo .card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 -75px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
-.Triangolo .card:nth-child(2)
-{
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+.Triangolo .card:nth-child(2) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-.Triangolo .card img
-{
-    transition: 0.5s;
-    width: 100%;
+
+.Triangolo .card img {
+  transition: 0.5s;
+  width: 100%;
 }
-.Triangolo .card:hover img
-{
-    transform: scale(1.5);
+
+.Triangolo .card:hover img {
+  transform: scale(1.5);
 }
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -136,17 +127,102 @@ footer .social-icons .social-link:hover {
 .privacy-link:hover {
   text-decoration: underline;
 }
-i{
+
+i {
   color: #000 !important;
   font-size: 20px;
 }
-.text-center{
+
+.text-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.privacy-link{
-  display: inline;
 
+.privacy-link {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+ 
+  .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+
+  .navbar-brand img {
+    max-width: 80px;
+  }
+
+  .Triangolo {
+    transform: scale(1);
+    width: 100%;
+    gap: 10px;
+  }
+
+  .Triangolo .card {
+    width: 80%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .Triangolo .card img {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .social-icons {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .privacy-link {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .auth-links a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  .Triangolo {
+    width: 100%;
+    transform: scale(1);
+  }
+
+  .Triangolo .card {
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .privacy-link {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .auth-links a {
+    font-size: 16px;
+  }
 }

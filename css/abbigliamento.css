@@ -3,6 +3,7 @@
 
 * {
     font-family: 'Geologica', serif;
+    box-sizing: border-box;
 }
 
 .sfondo-head {
@@ -60,11 +61,12 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .risultati {
     display: flex;
-    flex-flow: row wrap;    
+    flex-flow: row wrap;
     padding-left: 5em !important;
 }
 
@@ -133,10 +135,6 @@
     transition: background 0.2s ease;
 }
 
-#rangePrezzo::-webkit-slider-thumb:hover {
-    background: #e4aaa3 !important;
-}
-
 #resetFilter {
     background: #e4aaa3 !important;
     border: none;
@@ -159,17 +157,6 @@
     border-radius: 5px;
 }
 
-
-#selectCategoria:hover {
-    border-color: #e4aaa3;
-}
-
-#selectCategoria {
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-
 #selectCategoria:hover {
     border-color: #e4aaa3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -182,24 +169,122 @@
     border-radius: 5px !important;
 }
 
-
 #selectCategoria option:hover {
     background-color: #e4aaa3;
 }
 
-.btn-primary{
+.btn-primary {
     background: #e4aaa3 !important;
     border: none !important;
     color: black !important;
 }
 
-.card-title{
+.card-title {
     width: 100%;
 }
 
-.discover_more{
+.discover_more {
     position: relative;
     margin-top: 10px; 
     width: 50%; 
 }
 
+@media (max-width: 768px) {
+    .text-head {
+        font-size: 10vw;
+    }
+
+    .shop-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 1rem 0;
+    }
+
+    .card img {
+        width: 6em;
+    }
+
+    .filtri {
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .price {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .card .img {
+        width: 10em;
+        height: 10em;
+    }
+
+    #selectCategoria {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-head {
+        font-size: 12vw;
+    }
+
+    .shop-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 1rem 0;
+    }
+
+    .card img {
+        width: 6em;
+    }
+
+    .filtri {
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .price {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #selectCategoria {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .card .img {
+        width: 9em;
+        height: 9em;
+    }
+}
