@@ -29,8 +29,8 @@ fetch('https://fakestoreapi.com/products/' + productId)
                         </div>
                     </div>
                     <br><br>
-                    <a href="carrello.html" class="btn">Aggiungi al carrello</a><br>
-                    <a href="abbigliamento.html" class="btn btn-primary bottoneDettaglio mb-4">← Torna alla pagina prodotti</a>
+                    <a href="carrello.html" class="btn btn-primary mb-2">Aggiungi al carrello</a><br>
+                    <a href="abbigliamento.html" class="btn btn-light bottoneDettaglio mb-4">← Torna alla pagina prodotti</a>
                 </div>
             </div>`;
   })
