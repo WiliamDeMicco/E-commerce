@@ -5,6 +5,10 @@
     font-family: 'Geologica', serif;
 }
 
+body {
+    background-color: #fef8d1 !important;
+}
+
 .header a {
     overflow: hidden;
     background-color: #ffffff;
@@ -13,6 +17,7 @@
 }
 
 .header a {
+
     float: left;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -43,9 +48,11 @@
     border-width: 1px;
 }
 
+
 .container-card {
-    background-image: url(/img/SOFT_YELLOW_BANNER.png );
-    box-shadow: 0 1px 1px 0 rgba(254, 248, 209, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+    width: 90%;
+    margin-left: 5%;
 }
 
 /* Float the link section to the right */
@@ -61,7 +68,7 @@
     background-color: #e4aaa3;
     color: white;
     border-color: #fef8d1;
-
+    width: 50%;
 }
 
 #selectCategoria:hover {
@@ -96,7 +103,6 @@
     border-radius: 5px !important;
 }
 
-
 #selectCategoria option:hover {
     background-color: #e4aaa3;
 }
@@ -112,10 +118,14 @@ button {
     justify-content: center;
 }
 
+.navbar {
+    background-color: white;
+}
+
 .container {
     display: flex;
     justify-content: center;
-    ;
+
 
 }
 
@@ -142,9 +152,7 @@ aside {
     float: left;
     width: 20%;
     height: 20%;
-
     border-right: solid rgb(0, 0, 0, 0.1);
-    box-shadow: black 50%;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -232,4 +240,10 @@ i {
 .privacy-link {
     display: inline;
 
+}
+
+.card {
+    background-color: #fef8d1 !important;
+    border: 1px 1px 1px 1px;
+    box-shadow: 1px 5px 1px 1px #00000027 !important;
 }
