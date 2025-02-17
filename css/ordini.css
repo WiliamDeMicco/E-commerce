@@ -102,7 +102,7 @@ i {
 }
 
 body {
-  background-image: url(../img/SOFT_YELLOW_BANNER.png) no-repeat center center fixed !important;
+  background-image: url(../img/SOFT_YELLOW_BANNER.png) !important;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -110,11 +110,14 @@ body {
 }
 
 .blocco-centrale {
+  background-color: #ffffff;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border-radius: 2%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.04);
+
 }
 
 .filtri {
@@ -154,10 +157,12 @@ body {
   margin: 10px;
 }
 
-.card-img-top{
-  max-width: 18em !important;
-  padding: 5px;
+.img-fluid {
+  max-width: 50% !important;
+  object-fit: cover;
 }
+
+.card-img-top {}
 
 .btn-secondary {
   background: #17a2b8 !important;
