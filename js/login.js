@@ -44,3 +44,44 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //rendi visibile o non visibile la password
+
+// Funzione per aggiungere l'header Authorization alle richieste protette
+function getAuthHeaders() {
+    const token = localStorage.getItem("authToken");
+    return token ? { 'Authorization': 'Bearer ' + token } : {};
+  }
+
+function addUser(newUser) {
+    fetch('http://localhost:8080/api/users/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...getAuthHeaders()
+        },
+        body: JSON.stringify(newUser)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Non autorizzato o errore durante l\'aggiunta dell\'utente');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Risposta addUser:', data);
+    })
+    .catch(error => {
+        console.error('Errore nell\'aggiunta dell\'utente:', error);
+    });
+  }
+
+  document.getElementById('aggiungiUtente').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const newUser = {
+      name: document.getElementById('fName').value,
+      email: document.getElementById('typeEmailX').value,
+      cognome: document.getElementById('lName').value,
+      pIva: document.getElementById('pIva').value,
+      password: document.getElementById('creapw').value
+    };
+    addUser(newUser);
+  });

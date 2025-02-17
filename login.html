@@ -91,13 +91,13 @@
                                 <p class="text-black-50 mb-5">Inserisci la tua email e password!</p>
 
                                 <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                                    <label class="form-label" for="typeEmailX">Email</label>
+                                    <input type="email" id="typeEmailLog" class="form-control form-control-lg" />
+                                    <label class="form-label" for="typeEmailLog">Email</label>
                                 </div>
 
                                 <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                                    <label class="form-label" for="typePasswordX">Password</label>
+                                    <input type="password" id="typePasswordLog" class="form-control form-control-lg" />
+                                    <label class="form-label" for="typePasswordLog">Password</label>
                                 </div>
 
                                 <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Hai dimenticato la
@@ -169,49 +169,50 @@
                                 </div>
                                 <h2 class="fw-bold mb-2 text-uppercase">registrati</h2>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="text" id="fName" class="form-control form-control-lg" required />
-                                    <label class="form-label" for="fName">Nome</label>
-                                </div>
+                                <form id="aggiungiUtente">
+                                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                                        <input type="text" id="fName" class="form-control form-control-lg" required />
+                                        <label class="form-label" for="fName">Nome</label>
+                                    </div>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="text" id="lName" class="form-control form-control-lg" required />
-                                    <label class="form-label" for="lName">Cognome</label>
-                                </div>
+                                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                                        <input type="text" id="lName" class="form-control form-control-lg" required />
+                                        <label class="form-label" for="lName">Cognome</label>
+                                    </div>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="email" id="typeEmailX" class="form-control form-control-lg" required />
-                                    <label class="form-label" for="typeEmailX">Email</label>
-                                </div>
+                                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                                        <input type="email" id="typeEmailX" class="form-control form-control-lg" required />
+                                        <label class="form-label" for="typeEmailX">Email</label>
+                                    </div>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="text" id="pIva" class="form-control form-control-lg" maxlength="11"
-                                        pattern="\d{11}" required />
-                                    <label class="form-label" for="pIva">Partita IVA</label>
-                                </div>
+                                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                                        <input type="text" id="pIva" class="form-control form-control-lg" maxlength="11"
+                                            pattern="\d{11}" required />
+                                        <label class="form-label" for="pIva">Partita IVA</label>
+                                    </div>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="password" id="creapw" class="form-control form-control-lg" required />
-                                    <label class="form-label" for="typePasswordX">Password</label>
-                                    <i id="togglePassword" class="bi bi-eye-slash"
-                                        style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
-                                </div>
+                                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                                        <input type="password" id="creapw" class="form-control form-control-lg" minlength="6" required />
+                                        <label class="form-label" for="typePasswordX">Password</label>
+                                        <i id="togglePassword" class="bi bi-eye-slash"
+                                            style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
+                                    </div>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="password" id="confermapw" class="form-control form-control-lg"
-                                        required />
-                                    <label class="form-label" for="typePasswordX">Conferma Password</label>
-                                    <i id="togglePassword" class="bi bi-eye-slash"
-                                        style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
-                                </div>
+                                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                                        <input type="password" id="confermapw" class="form-control form-control-lg"
+                                            required />
+                                        <label class="form-label" for="typePasswordX">Conferma Password</label>
+                                        <i id="togglePassword" class="bi bi-eye-slash"
+                                            style="cursor: pointer; position: absolute; right: 10px; top: 10px;"></i>
+                                    </div>
 
 
 
-                                <button data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-outline-black btn-lg px-5" style="background-color:#e7b2aa;"
-                                    type="submit">Completa
-                                    Registrazione!</button>
-
+                                    <button data-mdb-button-init data-mdb-ripple-init
+                                        class="btn btn-outline-black btn-lg px-5" style="background-color:#e7b2aa;"
+                                        type="submit">Completa
+                                        Registrazione!</button>
+                                </form>
                             </div>
 
                         </div>
