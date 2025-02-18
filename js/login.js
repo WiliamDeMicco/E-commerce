@@ -103,7 +103,7 @@ document.getElementById('aggiungiUtente').addEventListener('submit', function (e
         name: document.getElementById('fName').value,
         email: document.getElementById('typeEmailX').value,
         cognome: document.getElementById('lName').value,
-        pIva: document.getElementById('pIva').value,
+        partitaIva: document.getElementById('pIva').value,
         password: document.getElementById('creapw').value
     };
     addUser(newUser);
