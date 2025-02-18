@@ -1,34 +1,30 @@
 //PASSARE DA LOGIN A REGISTRAZIONE E VICEVERSA
 
 document.addEventListener("DOMContentLoaded", function () {
-    const registrati = document.getElementById("registrati");  //selezione
+    const registrati = document.getElementById("registrati");
     const accedi = document.getElementById("accedi");
     const loginForm = document.querySelector(".loginform");
     const registrazioneForm = document.querySelector(".registrazioneform");
 
-    //nascondo il form di registrazione
+    //Nascondi il form di registrazione all'inizio
     registrazioneForm.style.display = "none";
 
+    //Gestione passaggio da login a registrazione
     registrati.addEventListener("click", function (event) {
-        event.preventDefault(); // Impedisce il comportamento di default 
-
-        //faccio uno switch tra login e registrazione, nascondendo login e "sbloccando" il form di registrazione
+        event.preventDefault();
         loginForm.style.display = "none";
         registrazioneForm.style.display = "block";
-
-        accedi.addEventListener("click", function (event) {
-            event.preventDefault();
-            registrazioneForm.style.display = "none";
-            loginForm.style.display = "block";
-        });
-
     });
 
+    //Gestione passaggio da registrazione a login
+    accedi.addEventListener("click", function (event) {
+        event.preventDefault();
+        registrazioneForm.style.display = "none";
+        loginForm.style.display = "block";
+    });
 });
 
-
-//CONTROLLO SULLA PASSWORD
-
+//CONTROLLO PASSWORD REGISTRAZIONE
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".registrazioneform");
     const submitButton = document.querySelector(".btn-outline-black");
@@ -37,43 +33,38 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("creapw").value;
         const confirmPassword = document.getElementById("confermapw").value;
 
-
-        if (password !== confermapw) {
-            event.preventDefault(); // Impedisce l'invio del form
+        if (password !== confirmPassword) {
+            event.preventDefault();
             alert("Le password non coincidono. Riprova.");
-
-            // Evidenzia in rosso i campi password
             document.getElementById("creapw").style.border = "2px solid red";
             document.getElementById("confermapw").style.border = "2px solid red";
         } else {
-            // Rimuove il bordo rosso se le password coincidono
             document.getElementById("creapw").style.border = "";
             document.getElementById("confermapw").style.border = "";
         }
     });
 });
 
-// RENDI VISIBILE LA PASSWORD
-
+//RENDI VISIBILE TEMPORANEAMENTE LA PASSWORD
 document.querySelectorAll('input[type="password"]').forEach((passwordField) => {
     passwordField.addEventListener('input', function () {
         this.type = 'text';
 
+        clearTimeout(this.hideTimer);
         this.hideTimer = setTimeout(() => {
             this.type = 'password';
-        }, 100.5);
-
-
+        }, 100.5); // 1 secondo
     });
 });
 
-// Funzione per aggiungere l'header Authorization alle richieste protette
+//FUNZIONE PER OTTENERE HEADERS AUTORIZZAZIONE
 function getAuthHeaders() {
     const token = localStorage.getItem("authToken");
-    return token ? { 'Authorization': 'Bearer ' + token } : {};
+    return token ? { "Authorization": "Bearer " + token } : {};
 }
 
-function addUser(newUser) {  //effettua una chiamata fetch con il metodo POST a un api
+//REGISTRAZIONE UTENTE
+function addUser(newUser) {
     fetch('http://localhost:8080/api/users/register', {
         method: 'POST',
         headers: {
@@ -82,29 +73,76 @@ function addUser(newUser) {  //effettua una chiamata fetch con il metodo POST a 
         },
         body: JSON.stringify(newUser)
     })
-        .then(response => {   //gestione della risposta 
+        .then(response => {
             if (!response.ok) {
-                throw new Error('Non autorizzato o errore durante l\'aggiunta dell\'utente');
+                throw new Error('Errore durante la registrazione');
             }
             return response.json();
         })
         .then(data => {
-            console.log('Risposta addUser:', data);
+            console.log('Utente registrato:', data);
+            alert("Registrazione completata! Ora puoi accedere.");
+            document.querySelector(".registrazioneform").style.display = "none";
+            document.querySelector(".loginform").style.display = "block";
         })
         .catch(error => {
-            console.error('Errore nell\'aggiunta dell\'utente:', error);
+            console.error('Errore:', error);
         });
 }
 
-//submit raccoglie i valori presi in input, crea un oggetto newUser con questi dati e chiama addUser(newUser) per inviare la richiesta all'api
+//GESTIONE INVIO FORM REGISTRAZIONE
 document.getElementById('aggiungiUtente').addEventListener('submit', function (event) {
     event.preventDefault();
     const newUser = {
         name: document.getElementById('fName').value,
         email: document.getElementById('typeEmailX').value,
         cognome: document.getElementById('lName').value,
-        pIva: document.getElementById('pIva').value,
+        partitaIva: document.getElementById('pIva').value,
         password: document.getElementById('creapw').value
     };
     addUser(newUser);
 });
+
+//LOGIN UTENTE
+function login(email, password) {
+    fetch("http://localhost:8080/api/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email: email, password: password })
+
+    })
+        .then(response => {
+            if (!response.ok) {
+                console.log("ciao");
+                throw new Error("Login fallito. Controlla le credenziali.");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Login effettuato:", data);
+
+            if (data.token) {
+                localStorage.setItem("authToken", data.token);
+                document.getElementById("logoutButton").style.display = "block";
+                document.querySelector(".loginform").style.display = "none";
+                alert("Accesso effettuato con successo!");
+
+                window.location.replace("index.html"); //reindirizzamento 
+            }
+        })
+        .catch(error => {
+            console.error("Errore nel login:", error);
+            alert(error.message);
+        });
+}
+
+//GESTIONE INVIO FORM LOGIN
+document.getElementById("accesso").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    login(email, password);
+});
+
