@@ -89,25 +89,28 @@
                                 </div>
                                 <h2 class="fw-bold mb-0 text-uppercase">login</h2>
                                 <p class="text-black-50 mb-5">Inserisci la tua email e password!</p>
+                                <form id="accesso">
+                                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                                        <input type="email" id="email" class="form-control form-control-lg" />
+                                        <label class="form-label" for="email">Email</label>
+                                    </div>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="email" id="typeEmailLog" class="form-control form-control-lg" />
-                                    <label class="form-label" for="typeEmailLog">Email</label>
-                                </div>
+                                    <div data-mdb-input-init class="form-outline form-white mb-4">
+                                        <input type="password" id="password" class="form-control form-control-lg" />
+                                        <label class="form-label" for="password">Password</label>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="password" id="typePasswordLog" class="form-control form-control-lg" />
-                                    <label class="form-label" for="typePasswordLog">Password</label>
+                                    </div>
 
-                                </div>
+                                    <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Hai dimenticato la
+                                            password?</a>
+                                    </p>
 
-                                <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Hai dimenticato la
-                                        password?</a>
-                                </p>
-
-                                <button data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-outline-black btn-lg px-5" style="background-color:#e7b2aa;"
-                                    type="submit">Accedi</button>
+                                    <button data-mdb-button-init data-mdb-ripple-init
+                                        class="btn btn-outline-black btn-lg px-5" id="loginBtn"
+                                        style="background-color:#e7b2aa;" type="submit">Accedi</button>
+                                </form>
+                                <h3 id="welcomeMessage"></h3>
+                                <button id="logoutButton" style="display:none;">Logout</button>
 
                                 <div class="d-flex justify-content-center text-center mt-4 pt-1">
                                     <ul class="social list-inline">
