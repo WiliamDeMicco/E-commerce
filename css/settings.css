@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: #fef8d1 !important;
+    background-image: linear-gradient(to bottom, rgba(254, 248, 209, 1), rgba(255, 255, 255, 0.02)) !important;
 }
 
 .header a {
