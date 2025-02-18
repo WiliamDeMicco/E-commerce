@@ -110,11 +110,14 @@ hr.sep {
     margin-left: 15%;
 }
 
+.col {
+    padding-top: 5px;
+}
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -122,13 +125,15 @@ footer {
     padding: 10px 20px;
     text-align: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    flex-direction: column; /* Posiziona gli elementi del footer in colonna su schermi piccoli */
+    flex-direction: column;
+    /* Posiziona gli elementi del footer in colonna su schermi piccoli */
 }
 
 .social-icons {
     display: flex;
     gap: 15px;
-    justify-content: center; /* Centra le icone social */
+    justify-content: center;
+    /* Centra le icone social */
 }
 
 .social-link {
@@ -163,7 +168,8 @@ a:link {
 @media (max-width: 768px) {
     footer {
         padding: 15px 20px;
-        flex-direction: column; /* Metti tutto in colonna su dispositivi più piccoli */
+        flex-direction: column;
+        /* Metti tutto in colonna su dispositivi più piccoli */
     }
 
     .social-icons {
@@ -179,7 +185,8 @@ a:link {
 @media (max-width: 480px) {
     footer {
         padding: 10px 15px;
-        flex-direction: column; /* Assicurati che il footer sia verticale su schermi piccoli */
+        flex-direction: column;
+        /* Assicurati che il footer sia verticale su schermi piccoli */
     }
 
     .social-icons {
@@ -189,4 +196,8 @@ a:link {
     .privacy-link {
         font-size: 10px;
     }
+}
+
+.container-fluid {
+    padding: 0;
 }
