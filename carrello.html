@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
     <div class="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -62,65 +63,66 @@
     </div>
 
     <!--QUI INSERIRE RESTO DEL CODICE-->
-    <div class="container py-5">
-        <div class="row g-4">
-            <div class="col-md-8">
-                <h2 class="fw-bold carrello">IL TUO CARRELLO</h2>
+    <div class="centro-pag">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-md-8">
+                    <h2 class="fw-bold carrello">IL TUO CARRELLO</h2>
 
-                <div class="carrello">
-                    <div class=" row text-center fw-bold">
-                        <div class="col">Articolo</div>
-                        <div class="col">Quantità</div>
-                        <div class="col">Prezzo</div>
-                    </div>
-                    <hr>
-                    <div class="row text-center align-items-center">
-                        <div class="col">
-                            <ul id="articolo" class="list-unstyled">
-                                <li>Nome articolo</li>
-                            </ul>
+                    <div class="carrello">
+                        <div class=" row text-center fw-bold">
+                            <div class="col">Articolo</div>
+                            <div class="col">Quantità</div>
+                            <div class="col">Prezzo</div>
                         </div>
-                        <div class="col">
-                            <div class="wrapper">
-                                <span class="minus">-</span>
-                                <span class="num">1</span>
-                                <span class="plus">+</span>
+                        <hr>
+                        <div class="row text-center align-items-center">
+                            <div class="col">
+                                <ul id="articolo" class="list-unstyled">
+                                    <li>Nome articolo</li>
+                                </ul>
                             </div>
-                            <button class="btn btn rimuovi btn-sm mt-0">Rimuovi</button>
-                        </div>
-                        <div class="col">
-                            <ul class="list-unstyled" id="lista_prezzi">
-                                <li id="price">€9,99</li>
-                            </ul>
+                            <div class="col">
+                                <div class="wrapper">
+                                    <span class="minus">-</span>
+                                    <span class="num">1</span>
+                                    <span class="plus">+</span>
+                                </div>
+                                <button class="btn btn rimuovi btn-sm mt-0">Rimuovi</button>
+                            </div>
+                            <div class="col">
+                                <ul class="list-unstyled" id="lista_prezzi">
+                                    <li id="price">€9,99</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="col-md-4">
-                <div class="riepilogo text-center">
-                    <br>
-                    <h2 class="fw-bold riepilogo">RIEPILOGO CARRELLO</h2>
-                    <hr class="sep">
-                    <ul id="lista_riepilogo">
-                        <li>prodotto</li>
-                        <li>prodotto</li>
-                    </ul>
-                    <hr class="sep">
-                    <p>Totale: <strong>€9,99</strong></p>
+                <div class="col-md-4">
+                    <div class="riepilogo text-center">
+                        <br>
+                        <h2 class="fw-bold riepilogo">RIEPILOGO CARRELLO</h2>
+                        <hr class="sep">
+                        <ul id="lista_riepilogo">
+                            <li>prodotto</li>
+                            <li>prodotto</li>
+                        </ul>
+                        <hr class="sep">
+                        <p>Totale: <strong>€9,99</strong></p>
 
-                    <button class="btn btn w-80 mt-3" style="background-color:#ffcd66; color: black;"><a
-                            href="http://127.0.0.1:3000/E-commerce/index.html" style="color:black;">Continua ad
-                            acquistare</a></button><br>
-                    <button class="btn btn w-80 mt-3" style="background-color:#ffcd66; color: black;">Procedi
-                        al
-                        pagamento</button>
+                        <button class="btn btn w-80 mt-3" style="background-color:#ffcd66; color: black;"><a
+                                href="http://127.0.0.1:3000/E-commerce/index.html" style="color:black;">Continua ad
+                                acquistare</a></button><br>
+                        <button class="btn btn w-80 mt-3" style="background-color:#ffcd66; color: black;">Procedi
+                            al
+                            pagamento</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="container-fluid fine-pagina">
         <footer
             class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mb-0 fine-pagina">
