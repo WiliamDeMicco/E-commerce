@@ -17,6 +17,8 @@ import jakarta.validation.constraints.*;
 
 import java.util.List;
 
+
+//DAjedajedajedajedajejdaejajdajejd
 @Entity
 public class Utente {
 	
