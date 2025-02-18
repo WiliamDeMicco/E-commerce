@@ -82,10 +82,22 @@ body {
 
 #selectCategoria {
     background-color: #e4aaa3;
-    color: white;
+    color: #e4aaa3;
     border-color: #fef8d1;
     width: 50%;
+    border: 2px solid #e4aaa3;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+}
+
+#text-center {
+    display: flex;
+    justify-content: center;
+}
+
+h5 {
+    text-align: center;
 }
 
 #selectCategoria:hover {
@@ -93,24 +105,14 @@ body {
     color: #fef8d1;
 }
 
-#selectCategoria {
-    border: 2px solid #e4aaa3;
-    border-radius: 5px;
-}
 
-#selectCategoria:hover {
-    border-color: #e4aaa3;
-}
-
-#selectCategoria {
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+#selectCategoria:hover {}
 
 #selectCategoria:hover {
     border-color: #e4aaa3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+
 }
 
 #selectCategoria option {
@@ -126,6 +128,12 @@ body {
 h1 {
     color: rgba(254, 248, 209);
     text-align: center;
+}
+
+form {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 button {
