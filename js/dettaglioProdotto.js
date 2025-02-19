@@ -33,8 +33,8 @@ fetch('https://fakestoreapi.com/products/' + productId)
                     <a href="abbigliamento.html" class="btn btn-light bottoneDettaglio mb-4">← Torna alla pagina prodotti</a>
                 </div>
             </div>`;
-      document.getElementById('aggiungi_carrello').addEventListener('click', () => {
-      addToCart(product.id);  // Aggiungiamo il prodotto al carrello tramite la funzione addToCart
+    document.getElementById('aggiungi_carrello').addEventListener('click', () => {
+      addToCart(product);  // Aggiungiamo il prodotto al carrello tramite la funzione addToCart
     });
   })
   .catch(error => console.error('Errore nel recupero del prodotto:', error));
@@ -70,7 +70,27 @@ const addCartToMemory = () => {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-const addToCart = (product_id) => {
+const addToCart = (product) => {
+  console.log(product);
+  let positionThisProductInCart = cart.findIndex((value) => value.product_id == product.id);
+  if (cart.length <= 0) {
+    cart = [{
+      product: product,
+      quantity: 1
+    }];
+  } else if (positionThisProductInCart < 0) {
+    cart.push({
+      product: product,
+      quantity: 1
+    });
+  } else {
+    cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+  }
+  addCartToMemory();
+}
+
+
+/*const addToCart = (product_id) => {
   console.log(product_id);
   let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
   if(cart.length <= 0){
@@ -87,4 +107,4 @@ const addToCart = (product_id) => {
       cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
   }
   addCartToMemory();
-}
+}*/
