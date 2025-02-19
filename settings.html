@@ -61,7 +61,7 @@
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="fa fa-sign-in" aria-hidden="true" href="#"></a>
-                                <a class="fa fa-user-plus" aria-hidden="true" href="#"></a>
+                                <button class="btn btn-success" id="logoutButton">logout</button>
                             </li>
                         </ul>
                     </div>
@@ -154,24 +154,24 @@
 </form>-->
     <h1>Aggiorna il profilo</h1>
     <div class="container-fluid text-center  m-3">
-        <form class="settings">
+        <form id="settings">
             <div class="grid-container">
                 <div class="row">
-                    <div class="col-sm-6 ">Nome<br><input type="text" name="fname"></div>
-                    <div class="col-sm-6">Cognome<br><input type="text" name="lastname"></div>
+                    <div class="col-sm-6 ">Nome<br><input id="fName" type="text" name="fname"></div>
+                    <div class="col-sm-6">Cognome<br><input id="lName" type="text" name="lastname"></div>
                 </div>
                 <div class="row">
-                    <div class=" col-sm-6">Email<br><input type="email" name="mail"></div>
-                    <div class="col-sm-6">Telefono<br><input type="tel" name="tel"></div>
+                    <div class=" col-sm-12">Email<br><input id="typeEmailX" type="email" name="typeEmailX"></div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6">Password<br><input type="password" name="pwd"></div>
-                    <div class="col-sm-6">P.IVA<br><input name="p.iva" name="p.iva" maxlength="11"></div>
+                    <div class="col-sm-6">Password<br><input id="creapw" type="password" name="pwd"></div>
+                    <div class="col-sm-6">P.IVA<br><input id="pIva" type="text" name="pIva" maxlength="11"></div>
                 </div><br>
-                <button id="aggiorna" class="btn bg-warning px-4">Aggiorna impostazioni</button>
+                <button id="aggiorna" class="btn bg-warning px-4" type="submit">Aggiorna impostazioni</button>
             </div>
         </form>
     </div>
+    <!--ascolta-->
     <!--spazio tra sezioni-->
     <br>
     <br>
@@ -206,6 +206,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="js/settings.js"></script>
 </body>
 
 </html>
