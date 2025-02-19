@@ -1,5 +1,5 @@
 // Funzione per effettuare il logout
-function logout() {
+function settings(newUser) {
     // Recupera il token dal localStorage
     const token = localStorage.getItem("authToken");        // DA PRENDERE PER L'AGGIORNAMENTO
     if (!token) {
@@ -12,7 +12,8 @@ function logout() {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token
-        }
+        },
+        body: JSON.stringify(newUser)
     })
         .then(response => {
             if (!response.ok) {
@@ -41,11 +42,11 @@ document.getElementById('settings').addEventListener('submit', function (event) 
         partitaIva: document.getElementById('pIva').value,
         password: document.getElementById('creapw').value
     };
-    addUser(newUser);                       // update(aggiornamento)
+    settings(newUser);                       // update(aggiornamento)
 });
 
 
-
+/*
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".settings");
     const button = document.querySelector(".btn.bg-warning");
@@ -58,4 +59,4 @@ document.addEventListener("DOMContentLoaded", function () {
         cardNome.textContent = nome || "Nome";
         cardCognome.textContent = cognome || "Cognome";
     });
-})
+})*/
