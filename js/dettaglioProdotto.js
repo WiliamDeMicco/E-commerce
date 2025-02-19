@@ -29,37 +29,25 @@ fetch('https://fakestoreapi.com/products/' + productId)
                         </div>
                     </div>
                     <br><br>
-                    <a href="carrello.html" class="btn btn-primary mb-2">Aggiungi al carrello</a><br>
+                    <a href="#" class="btn btn-primary mb-2" id="aggiungi_carrello">Aggiungi al carrello</a><br>
                     <a href="abbigliamento.html" class="btn btn-light bottoneDettaglio mb-4">← Torna alla pagina prodotti</a>
                 </div>
             </div>`;
+      document.getElementById('aggiungi_carrello').addEventListener('click', () => {
+      addToCart(product.id);  // Aggiungiamo il prodotto al carrello tramite la funzione addToCart
+    });
   })
   .catch(error => console.error('Errore nel recupero del prodotto:', error));
-/*
-    const container = document.getElementById('articolo');
-    container.innerHTML=`
-    <li>{product.description}</li>
-    `
-    const riepilogo = document.getElementById('lista_prezzi');
-    container.innerHTML=`
-    <li>{product.price}</li>
-    `
-
-    const riepilogo = document.getElementById('lista_riepilogo');
-    riepilogo.innerHTML=`
-    <li>x1 {product.title} = {product.price}</li>
-    `
-*/
 
 
 const carosello = document.getElementById('carosello');
 
 fetch('https://fakestoreapi.com/products?limit=3')
-    .then(response => response.json())
-    .then(products => {
-        const productsCards = products.map(product => {
-         
-            return `
+  .then(response => response.json())
+  .then(products => {
+    const productsCards = products.map(product => {
+
+      return `
         <div class="card m-2 consigliati d-flex flex-column justify-content-between">
         <div>
         <img src="${product.image}" alt="${product.title}">
@@ -70,7 +58,33 @@ fetch('https://fakestoreapi.com/products?limit=3')
         </div>
       </div>
     `;
-        }).join('');
-        carosello.innerHTML = productsCards;
-    })
-    .catch(error => console.error('Errore nel recupero dei prodotti:', error));
+    }).join('');
+    carosello.innerHTML = productsCards;
+  })
+  .catch(error => console.error('Errore nel recupero dei prodotti:', error));
+
+
+let cart = [];
+
+const addCartToMemory = () => {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+const addToCart = (product_id) => {
+  console.log(product_id);
+  let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
+  if(cart.length <= 0){
+      cart = [{
+          product_id: product_id,
+          quantity: 1
+      }];
+  }else if(positionThisProductInCart < 0){
+      cart.push({
+          product_id: product_id,
+          quantity: 1
+      });
+  }else{
+      cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+  }
+  addCartToMemory();
+}
