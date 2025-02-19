@@ -147,9 +147,13 @@ button {
 
 .container {
     display: flex;
-    justify-content: center;
     display: flex;
     justify-content: center;
+
+
+    display: flex;
+    justify-content: center;
+   
 }
 
 .col-sm-6 {
@@ -171,6 +175,7 @@ input {
 
 aside {
     margin-left: -2%;
+    margin-left: -2%;
     float: left;
     width: 20%;
     height: 20%;
@@ -183,6 +188,7 @@ aside {
     padding-right: 1%;
     padding-left: 1%;
     z-index: 0;
+    margin-left: -2%;
     margin-left: -2%;
     float: left;
     width: 20%;
@@ -224,45 +230,32 @@ footer {
     background-color: #f1f1f1;
     padding: 15px 0;
     text-align: center;
-    /* Centra il testo orizzontalmente */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    /* Imposta il footer come un contenitore flex */
     flex-direction: column;
-    /* Organizza gli elementi in colonna */
     align-items: center;
-    /* Centra orizzontalmente gli elementi */
     justify-content: center;
-    /* Centra verticalmente gli elementi */
     z-index: 10;
 }
 
-/* Icone social all'interno del footer, centrate orizzontalmente */
 .social-icons {
     display: inline-flex;
-    /* Allinea le icone in orizzontale */
     justify-content: center;
-    /* Centra le icone orizzontalmente */
     gap: 15px;
-    /* Distanza tra le icone */
     margin-bottom: 10px;
-    /* Distanza tra le icone e il testo sottostante */
 }
 
-/* Icone social link */
 footer .social-link {
     font-size: 24px;
     color: #333;
-    /* Colore delle icone */
+  
 }
 
-/* Cambia colore delle icone al passaggio del mouse */
 footer .social-link:hover {
     color: #0056b3;
-    /* Colore hover */
+ 
 }
 
-/* Centra il testo e i link privacy nel footer */
 footer .text-center {
     display: flex;
     flex-direction: column;
@@ -270,19 +263,16 @@ footer .text-center {
     justify-content: center;
 }
 
-/* Link privacy con piccolo margine */
 footer .privacy-link {
     margin: 5px;
     text-decoration: none;
     color: #333;
 }
 
-/* Cambia aspetto del link privacy al passaggio del mouse */
 footer .privacy-link:hover {
     text-decoration: underline;
 }
 
-/* Media Queries per ottimizzare su schermi piccoli */
 @media (max-width: 480px) {
     footer {
         padding: 10px;
@@ -290,7 +280,6 @@ footer .privacy-link:hover {
 
     .social-icons {
         gap: 8px;
-        /* Riduce la distanza tra le icone */
     }
 
     .privacy-link {
@@ -310,6 +299,7 @@ footer .privacy-link:hover {
         padding: 15px;
         align-items: center;
     }
+
 }
 
 .card {
@@ -318,6 +308,8 @@ footer .privacy-link:hover {
     box-shadow: 1px 5px 1px 1px #00000027 !important;
 
     .social-icons {
+    .social-icons {
         gap: 10px;
     }
-}
+
+}}
