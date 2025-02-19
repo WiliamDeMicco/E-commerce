@@ -154,24 +154,25 @@
 </form>-->
     <h1>Aggiorna il profilo</h1>
     <div class="container-fluid text-center  m-3">
-        <form class="settings">
+        <form id="settings">
             <div class="grid-container">
                 <div class="row">
-                    <div class="col-sm-6 ">Nome<br><input type="text" name="fname"></div>
-                    <div class="col-sm-6">Cognome<br><input type="text" name="lastname"></div>
+                    <div id="fName" class="col-sm-6 ">Nome<br><input type="text" name="fname"></div>
+                    <div id="lName" class="col-sm-6">Cognome<br><input type="text" name="lastname"></div>
                 </div>
                 <div class="row">
-                    <div class=" col-sm-6">Email<br><input type="email" name="mail"></div>
+                    <div id="typeEmailX" class=" col-sm-6">Email<br><input type="email" name="mail"></div>
                     <div class="col-sm-6">Telefono<br><input type="tel" name="tel"></div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6">Password<br><input type="password" name="pwd"></div>
-                    <div class="col-sm-6">P.IVA<br><input name="p.iva" name="p.iva" maxlength="11"></div>
+                    <div id="creapw" class="col-sm-6">Password<br><input type="password" name="pwd"></div>
+                    <div id="pIva" class="col-sm-6">P.IVA<br><input name="p.iva" name="p.iva" maxlength="11"></div>
                 </div><br>
-                <button id="aggiorna" class="btn bg-warning px-4">Aggiorna impostazioni</button>
+                <button id="aggiorna" class="btn bg-warning px-4" type="submit">Aggiorna impostazioni</button>
             </div>
         </form>
     </div>
+    <!--ascolta-->
     <!--spazio tra sezioni-->
     <br>
     <br>
