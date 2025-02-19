@@ -287,4 +287,10 @@
         width: 9em;
         height: 9em;
     }
+
+    .fa-cart-shopping{
+        display: block;
+        color: black !important;
+        width: 50% !important;
+    }
 }
