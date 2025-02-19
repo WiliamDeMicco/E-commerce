@@ -17,6 +17,8 @@ import jakarta.validation.constraints.*;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Utente {
 	
@@ -45,6 +47,7 @@ public class Utente {
 	private String password;
 	
 	@OneToMany(mappedBy="utenti")
+	@JsonBackReference
 	private List<Ordine> ordini;
 	
 	private String token;
