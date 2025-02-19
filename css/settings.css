@@ -13,11 +13,11 @@
 }
 
 body {
-    background-color: #fef8d1 !important;
+    background-image: linear-gradient(to bottom, rgba(254, 248, 209, 1), rgba(255, 255, 255, 0.02)) !important;
 }
 
 .header a {
-    <<<<<<< HEAD overflow: hidden;
+    overflow: hidden;
     background-color: #ffffff;
     padding: 0px 0px;
 
@@ -33,7 +33,7 @@ body {
     font-size: 18px;
     line-height: 25px;
 
-    =======overflow: hidden;
+    overflow: hidden;
     background-color: #ffffff;
     padding: 0px 0px;
     float: left;
@@ -43,7 +43,6 @@ body {
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
-    >>>>>>>68798dc09f35ad205491eacaa408c51e8013d539
 }
 
 .header a.logo {
@@ -65,9 +64,13 @@ body {
     border-width: 1px;
 }
 
+.mt-3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 .container-card {
-
     width: 90%;
     margin-left: 5%;
 }
@@ -82,11 +85,11 @@ body {
 
 #selectCategoria {
     background-color: #e4aaa3;
-    color: #e4aaa3;
+    color: white;
     border-color: #fef8d1;
-    width: 50%;
-    border: 2px solid #e4aaa3;
-    border-radius: 5px;
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 }
@@ -105,14 +108,10 @@ h5 {
     color: #fef8d1;
 }
 
-
-#selectCategoria:hover {}
-
 #selectCategoria:hover {
     border-color: #e4aaa3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-
 }
 
 #selectCategoria option {
@@ -147,13 +146,10 @@ button {
 }
 
 .container {
-    <<<<<<< HEAD display: flex;
+    display: flex;
     justify-content: center;
-
-
-    =======display: flex;
+    display: flex;
     justify-content: center;
-    >>>>>>>68798dc09f35ad205491eacaa408c51e8013d539
 }
 
 .col-sm-6 {
@@ -174,7 +170,7 @@ input {
 }
 
 aside {
-    <<<<<<< HEAD margin-left: -2%;
+    margin-left: -2%;
     float: left;
     width: 20%;
     height: 20%;
@@ -187,7 +183,7 @@ aside {
     padding-right: 1%;
     padding-left: 1%;
     z-index: 0;
-    =======margin-left: -2%;
+    margin-left: -2%;
     float: left;
     width: 20%;
     height: 20%;
@@ -201,7 +197,6 @@ aside {
     padding-right: 1%;
     padding-left: 1%;
     z-index: 0;
-    >>>>>>>68798dc09f35ad205491eacaa408c51e8013d539
 }
 
 aside:hover {
@@ -315,8 +310,6 @@ footer .privacy-link:hover {
         padding: 15px;
         align-items: center;
     }
-
-    <<<<<<< HEAD
 }
 
 .card {
@@ -324,9 +317,7 @@ footer .privacy-link:hover {
     border: 1px 1px 1px 1px;
     box-shadow: 1px 5px 1px 1px #00000027 !important;
 
-    =======.social-icons {
+    .social-icons {
         gap: 10px;
     }
-
-    >>>>>>>68798dc09f35ad205491eacaa408c51e8013d539
 }
