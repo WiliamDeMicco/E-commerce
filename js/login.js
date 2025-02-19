@@ -58,7 +58,7 @@ document.querySelectorAll('input[type="password"]').forEach((passwordField) => {
 });
 
 //FUNZIONE PER OTTENERE HEADERS AUTORIZZAZIONE
-function getAuthHeaders() {
+function getAuthHeaders() {                     // COPIARE E METTERE A INIZIO PROFILO.JS
     const token = localStorage.getItem("authToken");
     return token ? { "Authorization": "Bearer " + token } : {};
 }
@@ -91,16 +91,16 @@ function addUser(newUser) {
 }
 
 //GESTIONE INVIO FORM REGISTRAZIONE
-document.getElementById('aggiungiUtente').addEventListener('submit', function (event) {
+document.getElementById('aggiungiUtente').addEventListener('submit', function (event) {             // da prendere integralmente
     event.preventDefault();
-    const newUser = {
+    const newUser = {                       // const aggiornamento
         name: document.getElementById('fName').value,
         email: document.getElementById('typeEmailX').value,
         cognome: document.getElementById('lName').value,
         partitaIva: document.getElementById('pIva').value,
         password: document.getElementById('creapw').value
-    };
-    addUser(newUser);
+    };  
+    addUser(newUser);                       // update(aggiornamento)
 });
 
 //LOGIN UTENTE
