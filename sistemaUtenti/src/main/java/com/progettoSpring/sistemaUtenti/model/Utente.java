@@ -17,6 +17,8 @@ import jakarta.validation.constraints.*;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 
 //DAjedajedajedajedajejdaejajdajejd
 @Entity
@@ -46,7 +48,9 @@ public class Utente {
 	@Size(min=6, message="Campo PASSWORD obbligatorio")
 	private String password;
 	
+	
 	@OneToMany(mappedBy="utenti")
+	@JsonBackReference
 	private List<Ordine> ordini;
 	
 	private String token;

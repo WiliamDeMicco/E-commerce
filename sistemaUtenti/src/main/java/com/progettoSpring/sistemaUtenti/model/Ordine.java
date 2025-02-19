@@ -8,7 +8,10 @@ package com.progettoSpring.sistemaUtenti.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Ordine {
@@ -17,10 +20,11 @@ public class Ordine {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message="Campo DATA obbligatorio")
+	@NotNull(message="Campo DATA obbligatorio")
 	private LocalDate data_ordine;
 	
 	@ManyToOne
+	@JsonManagedReference
 	@JoinColumn(name="utente_id")
 	private Utente utenti;
 	
