@@ -24,6 +24,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//MOSTRA O NASCONDI PASSWORD
+document.querySelectorAll('.toggle-password').forEach(button => {
+    button.addEventListener('click', function () {
+        const passwordField = this.previousElementSibling;
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            this.innerHTML = '🔓';
+        } else {
+            passwordField.type = 'password';
+            this.innerHTML = '🔒';
+        }
+    });
+});
+
 //CONTROLLO PASSWORD REGISTRAZIONE
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".registrazioneform");
@@ -46,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //RENDI VISIBILE TEMPORANEAMENTE LA PASSWORD
-document.querySelectorAll('input[type="password"]').forEach((passwordField) => {
+/*document.querySelectorAll('input[type="password"]').forEach((passwordField) => {
     passwordField.addEventListener('input', function () {
         this.type = 'text';
 
@@ -55,7 +69,7 @@ document.querySelectorAll('input[type="password"]').forEach((passwordField) => {
             this.type = 'password';
         }, 100.5); // 1 secondo
     });
-});
+});*/
 
 //FUNZIONE PER OTTENERE HEADERS AUTORIZZAZIONE
 function getAuthHeaders() {
@@ -116,7 +130,7 @@ function login(email, password) {
         .then(response => {
             if (!response.ok) {
                 console.log("ciao");
-                throw new Error("Login fallito. Controlla le credenziali.");
+                throw new Error("Login fallito :( Controlla le credenziali!");
             }
             return response.json();
         })
@@ -134,7 +148,10 @@ function login(email, password) {
         })
         .catch(error => {
             console.error("Errore nel login:", error);
-            alert(error.message);
+            const loginError = document.getElementById("loginError");
+            loginError.textContent = error.message;
+            loginError.style.display = "block";
+            //alert(error.message);
         });
 }
 
