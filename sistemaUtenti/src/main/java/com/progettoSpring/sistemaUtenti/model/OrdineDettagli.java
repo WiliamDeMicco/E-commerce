@@ -4,6 +4,8 @@
  */
 package com.progettoSpring.sistemaUtenti.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
@@ -59,5 +61,4 @@ public class OrdineDettagli {
 	public void setOrdine(Ordine ordine) {
 		this.ordine = ordine;
 	}
-	
 }
