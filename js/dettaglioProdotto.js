@@ -33,6 +33,7 @@ fetch('https://fakestoreapi.com/products/' + productId)
                     <a href="abbigliamento.html" class="btn btn-light bottoneDettaglio mb-4">← Torna alla pagina prodotti</a>
                 </div>
             </div>`;
+
     document.getElementById('aggiungi_carrello').addEventListener('click', () => {
       addToCart(product);  // Aggiungiamo il prodotto al carrello tramite la funzione addToCart
     });
