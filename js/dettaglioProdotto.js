@@ -75,7 +75,7 @@ const addToCart = (product) => {
   let positionThisProductInCart = cart.findIndex((value) => value.product_id == product.id);
   if (cart.length <= 0) {
     cart = [{
-      product: product,
+      product: product,        //metto product dentro un oggetto json 
       quantity: 1
     }];
   } else if (positionThisProductInCart < 0) {
@@ -156,3 +156,4 @@ function getAuthHeaders() {
   const token = localStorage.getItem("authToken");
   return token ? { 'Authorization': 'Bearer ' + token } : {};
 }
+
